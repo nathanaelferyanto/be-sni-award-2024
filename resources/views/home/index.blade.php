@@ -62,9 +62,8 @@
         class="carousel slide col-8"
         data-bs-ride="carousel"
         data-bs-pause="false"
-        data-bs-keyboard="false"
-      >
-        <div class="carousel-inner rounded-3 float-end">
+        data-bs-keyboard="false">
+        <div class="carousel-inner rounded-3 float-start">
           <div
             class="carousel-item bg-light active"
             data-bs-interval="2000"

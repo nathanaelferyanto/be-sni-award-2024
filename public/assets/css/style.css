@@ -391,12 +391,81 @@ ul a {
 }
 
 /* Login Page */
-.login-container {
-    height: 656px;
+#login {
+    padding-block: 60px;
+    padding-inline: 160px;
+    background-image: url("../images/icon/Vector\ 7.svg");
+
+    /* Properti tambahan opsional */
+    background-size: cover; /* Menyesuaikan ukuran gambar dengan ukuran kotak elemen */
+    background-position: center; /* Posisi gambar latar di tengah elemen */
+    background-repeat: no-repeat; /* Mencegah gambar latar terulang */
+    z-index: -1;
 }
 
-.login-container .content img {
+.login-container {
+    border-radius: 37px;
+    box-shadow: 6px 6px 15px 10px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.login-container .content-kiri {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container .content-kiri img {
     width: 506px;
+}
+
+.login-container .content-kanan {
+    border-radius: 37px;
+    background-color: #d9aa1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container .content-kanan img {
+    width: 193px;
+    height: 191px;
+}
+
+.login-container .content-kanan h1 {
+    font-weight: bold;
+    font-size: 43px;
+}
+
+.login-container .content-kanan form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-container .content-kanan form input {
+    border-radius: 37px;
+    width: 357px;
+    height: 60px;
+}
+
+.login-container .content-kanan form .form-text {
+    color: white;
+    font-size: 18px;
+}
+
+.login-container .content-kanan form .form-text a {
+    color: white;
+}
+
+.login-container .content-kanan .button button {
+    background-color: #bf8211;
+    color: white;
+    border-radius: 37px;
+    height: 40px;
+    width: 214px;
 }
 
 /* .thumbnail {
