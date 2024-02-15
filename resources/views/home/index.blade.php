@@ -90,7 +90,7 @@
           <h2>Berita Terkini</h2>
           <img
             src="{{ asset('assets') }}/images/dokumentasi/berita-terkini.png"
-            class="p-0 rounded-3 border"
+            class="p-0"
             alt=""
           />
         </div>
@@ -230,6 +230,37 @@
             </p>
             <button class="btn">Baca Selengkapnya</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article id="acara">
+    <div class="acara-container">
+      <div class="title col-12">
+        <h1>Kumpulan Acara</h1>
+        <hr>
+        <p>Beberapa acara yang telah dilaksanakan sebelumnya: </p>
+      </div>
+      <div class="content-atas row">
+        <div class="col-6">
+          <img src="{{ asset('assets') }}/images/acara/acara1.png" alt="">
+        </div>
+        <div class="col-6">
+          <h3>SNI Award 2023, untuk Kinerja Unggul dan efisien</h3>
+          <p>BSN akan mengadakan Seminar Nasional dalam rangka Peringatan Hari Standar Dunia dan Bulan Mutu Nasional (BMN) 2021. Seminar akan dilaksanakan pada bulan November 2021 .</p>
+          <button class="btn float-end">Baca Selengkapnya</button>
+        </div>          
+      </div>
+
+      <div class="content-bawah row">
+        <div class="col-6">
+          <h3>Pendaftaran SNI 2024 menjadi sorotan para pekerja</h3>
+          <p>BSN akan mengadakan Seminar Nasional dalam rangka Peringatan Hari Standar Dunia dan Bulan Mutu Nasional (BMN) 2021. Seminar akan dilaksanakan pada bulan November 2021 .</p>
+          <button class="btn float-end">Baca Selengkapnya</button>
+        </div>
+        <div class="col-6">
+          <img src="{{ asset('assets') }}/images/acara/acara2.png" alt="">
         </div>
       </div>
     </div>
