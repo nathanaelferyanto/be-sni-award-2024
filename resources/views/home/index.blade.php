@@ -46,44 +46,66 @@
     </div>
   </article>
 
-  <article id="dokumentasi" class="half-bg-theme">
-    <div
-      class="dokumentasi-container row d-flex justify-content-center align-content-center"
-    >
-      <div class="title-container col-4">
-        <h1>Dokumentasi</h1>
-        <hr />
-        <h2>Temukan <span>Kegiatan</span></h2>
-        <p>"Jelajah dan Kenali Kami dengan Anda Dimulai Di Sini!"</p>
-      </div>
-
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide col-8"
-        data-bs-ride="carousel"
-        data-bs-pause="false"
-        data-bs-keyboard="false">
-        <div class="carousel-inner rounded-3 float-start">
-          <div
-            class="carousel-item bg-light active"
-            data-bs-interval="2000"
-          >
-            <img src="{{ asset('assets') }}/images/dokumentasi/berita-terkini.png" class="p-0 w-100" alt="" />
-          </div>
-
-          <div class="carousel-item rounded-3" data-bs-interval="2000">
-            <img src="{{ asset('assets') }}/images/dokumentasi/berita.png" class="p-0 w-100" alt="" />
+  <article id="dokumentasi">
+  <section id="slider" class="pt-5">
+      <div class="carousel-container">
+        <h1 class="text-center">Dokumentasi</h1>
+        <hr class="mb-4">
+        <p class="text-center pb-5">"Jelajah dan Kenali Kami dengan Anda Dimulai Disini!"</p>
+        <div class="slider py-5 px-5">
+          <div class="owl-carousel">
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <img src="{{ asset('assets') }}/images/dokumentasi/berita.png" alt="" />
+              </div>
+              <!-- <h5 class="mb-0 text-center"><b>HTML CSS3 Tutorials</b></h5>
+              <p class="text-center p-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+                temporibus quidem magni qui doloribus quasi natus inventore nisi
+                velit minima.
+              </p> -->
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <img src="{{ asset('assets') }}/images/dokumentasi/berita-terkini.png" alt="" />
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <img src="{{ asset('assets') }}/images/dokumentasi/berita.png" alt="" />
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <img src="{{ asset('assets') }}/images/dokumentasi/berita-terkini.png" alt="" />
+              </div>
+            </div>
+            <div class="slider-card">
+              <div
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <img src="{{ asset('assets') }}/images/dokumentasi/berita.png" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </article>
 
   <article id="news">
     <div class="artikel-container row">
       <div class="title-container col-12">
         <h1>Artikel</h1>
-        <hr />
+        <hr class="mx-0" />
       </div>
       <div class="content-container col-6">
         <div class="content row">
@@ -239,7 +261,7 @@
     <div class="acara-container">
       <div class="title col-12">
         <h1>Kumpulan Acara</h1>
-        <hr>
+        <hr class="mx-0">
         <p>Beberapa acara yang telah dilaksanakan sebelumnya: </p>
       </div>
       <div class="content-atas row">
@@ -270,7 +292,7 @@
     <div class="contact-container">
       <div class="title">
         <h1>Tinggal Balasan di Sini</h1>
-        <hr />
+        <hr class="mx-0" />
       </div>
       <div class="row justify-content-center">
         <div class="col-6">

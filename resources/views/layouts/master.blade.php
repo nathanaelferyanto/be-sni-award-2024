@@ -25,10 +25,18 @@
     />
 
     <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://unpkg.com/feather-icons"></script>
 
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{{ asset('assets') }}/css/owl.carousel.min.css" />
+
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('assets') }}/css/styles.css" />
   </head>
   <body>
     <header>
@@ -157,6 +165,10 @@
     <script>
       feather.replace();
     </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="{{ asset('assets') }}/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets') }}/js/script.js"></script>
   </body>
 </html>
