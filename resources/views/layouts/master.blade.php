@@ -40,13 +40,13 @@
   </head>
   <body>
     <header>
-      <div class="row">
-        <div class="logo col-2">
+      <div class="row ms-5">
+        <!-- <div class="logo col-2">
           <a href=""
             ><img src="{{ asset('assets') }}/images/icon/logo-sniaward.svg" alt="Logo SNI Award"
           /></a>
-        </div>
-        <nav class="navbar navbar-expand-lg col-8">
+        </div> -->
+        <nav class="navbar navbar-expand-lg col-12 px-4">
           <div class="container-fluid">
             <button
               class="navbar-toggler"
@@ -63,28 +63,31 @@
               class="collapse navbar-collapse justify-content-center"
               id="navbarNavAltMarkup"
             >
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Beranda</a
-                >
-                <a class="nav-link" href="#">Informasi</a>
-                <a class="nav-link" href="#">Unduh</a>
-                <a class="nav-link" href="#">Linimasa</a>
-                <a class="nav-link" href="#">Acara</a>
-                <a class="nav-link" href="#">FAQ</a>
-                <a class="nav-link" href="#">Kontak</a>
+              <div class="navbar-container py-2 px-4 d-flex align-items-center"> 
+                <div class="logo-container me-5">
+                  <a href=""><img src="{{ asset('assets') }}/images/icon/logo-bsn.svg" class="logo-bsn ms-2" alt="Logo BSN"/></a>
+                  <a href=""><img src="{{ asset('assets') }}/images/icon/logo-sniaward.svg" class="logo-sniaward ms-2" alt="Logo SNI Award"/></a>
+                </div>
+                
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Beranda</a
+                  >
+                  <a class="nav-link" href="#">Informasi</a>
+                  <a class="nav-link" href="#">Unduh</a>
+                  <a class="nav-link" href="#">Linimasa</a>
+                  <a class="nav-link" href="#">Acara</a>
+                  <a class="nav-link" href="#">FAQ</a>
+                  <a class="nav-link" href="#">Kontak</a>
+                </div>
               </div>
+              
+              <div class="icon-navbar collapse navbar-collapse ms-4">
+            <a href="#"><img src="{{ asset('assets') }}/images/icon/user.svg" alt="" /></a>
+          </div>
             </div>
           </div>
         </nav>
-        <div class="navbar navbar-expand-lg col-2">
-          <div
-            class="icon-navbar collapse navbar-collapse justify-content-center"
-          >
-            <a href="#"><img src="{{ asset('assets') }}/images/icon/search.svg" alt="" /></a>
-            <a href="#"><img src="{{ asset('assets') }}/images/icon/user.svg" alt="" /></a>
-          </div>
-        </div>
       </div>
     </header>
     @yield('content')
@@ -167,7 +170,7 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="{{ asset('assets') }}/bootstrap-5.3.2/js/bootstrap.js"></script>
     <script src="{{ asset('assets') }}/js/owl.carousel.min.js"></script>
     <script src="{{ asset('assets') }}/js/script.js"></script>
   </body>

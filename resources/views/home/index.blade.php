@@ -2,34 +2,37 @@
 
 @section('content')
 <main>
-  <article class="row" id="jumbotron">
-    <div class="title-container col-8">
-      <h1>
-        <span>Selamat </span>Datang di Website
-        <span>SNI Award 2024</span>
-      </h1>
-      <p>
-        SNI Award dicanangkan sebagai The National Quality Award of
-        <br />Indonesia sejak tahun 2005
-      </p>
-    </div>
-    <div class="image-container col-4">
-      <img src="{{ asset('assets') }}/images/icon/Frame 2.png" class="w-100" alt="" />
-    </div>
-    <div class="card-container row">
-      <div class="card col-3 align-content-center">
-        <img src="{{ asset('assets') }}/images/icon/buku-biru.svg" alt="" />
-        <p>Seputar SNI Award</p>
+  <article id="jumbotron" class="bg-theme">
+    <div class="row" id="container-jumbotron">
+      <div class="title-container col-8">
+        <h1>
+          Selamat Datang di Website
+          <span>SNI Award 2024</span>
+        </h1>
+        <p>
+          SNI Award dicanangkan sebagai The National Quality Award of
+          <br />Indonesia sejak tahun 2005
+        </p>
       </div>
-      <div class="card col-3">
-        <img src="{{ asset('assets') }}/images/icon/juri-biru.svg" alt="" />
-        <p>Dewan Juri SNI Award</p>
+      <div class="image-container col-4">
+        <img src="{{ asset('assets') }}/images/icon/Frame 2.png" class="w-100" alt="" />
       </div>
-      <div class="card col-3">
-        <img src="{{ asset('assets') }}/images/icon/medali-biru.svg" alt="" />
-        <p>Peraih SNI Award</p>
+      <div class="card-container row">
+        <div class="card col-3 align-content-center">
+          <img src="{{ asset('assets') }}/images/icon/buku-biru.svg" alt="" />
+          <p>Seputar SNI Award</p>
+        </div>
+        <div class="card col-3">
+          <img src="{{ asset('assets') }}/images/icon/juri-biru.svg" alt="" />
+          <p>Dewan Juri SNI Award</p>
+        </div>
+        <div class="card col-3">
+          <img src="{{ asset('assets') }}/images/icon/medali-biru.svg" alt="" />
+          <p>Peraih SNI Award</p>
+        </div>
       </div>
     </div>
+    
   </article>
 
   <article id="about">
@@ -51,7 +54,7 @@
       <div class="carousel-container">
         <h1 class="text-center">Dokumentasi</h1>
         <hr class="mb-4">
-        <p class="text-center pb-5">"Jelajah dan Kenali Kami dengan Anda Dimulai Disini!"</p>
+        <p class="text-center pb-5">"Jelajah dan Kenali Kami dengan Anda Dimulai Di sini!"</p>
         <div class="slider py-5 px-5">
           <div class="owl-carousel">
             <div class="slider-card">
@@ -287,6 +290,71 @@
       </div>
     </div>
   </article>
+
+  <!-- FAQ 1 - Bootstrap Brain Component -->
+  <!-- FAQ 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5">
+  <div class="container">
+    <div class="row gy-5 gy-lg-0 align-items-lg-center">
+      <div class="col-6">
+        <div class="row justify-content-xl-end">
+          <div class="col-12 col-xl-11">
+            <div class="accordion accordion-flush" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How Do I Change My Billing Information?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>To change your billing information, please follow these steps:</p>
+                    <ul>
+                      <li>Go to our website and sign in to your account.</li>
+                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                      <li>Under the "Billing Information" section, click on "Edit."</li>
+                      <li>Make your changes and click on "Save."</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How Does Payment System Work?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How Do I Cancel My Account?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>To cancel your account, please follow these steps:</p>
+                    <ul>
+                      <li>Go to our website and sign in to your account.</li>
+                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                      <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                      <li>Enter your password and click on "Cancel Account."</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <article id="contact">
     <div class="contact-container">
