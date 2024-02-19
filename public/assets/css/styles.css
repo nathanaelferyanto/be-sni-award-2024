@@ -8,15 +8,15 @@ body {
     font-family: "Arimo", sans-serif;
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
 }
 
 #about,
 #news,
 #acara,
-#contact {
+.contact-container {
     margin-inline: 85px;
     margin-top: 100px;
-    /* margin-block: 50px; */
 }
 
 #container-jumbotron {
@@ -84,10 +84,6 @@ h1 {
 
 .logo-container .logo-sniaward {
     height: 70px;
-}
-
-.icon-navbar a svg {
-    color: #f2d022;
 }
 
 .bg-theme {
@@ -305,12 +301,92 @@ p.description {
 }
 
 /* faq */
+.faq-container {
+    display: flex;
+    align-items: center;
+}
+
+.accordion {
+    margin-top: -100px;
+    background: transparent;
+}
+
+h2.accordion-header {
+    margin-top: 0px !important;
+}
+
+.accordion-item:first-of-type {
+    margin-top: 100px;
+}
+
 .accordion-item {
-    margin-bottom: -80px;
+    border: 1px solid #e59b30 !important;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px !important;
+}
+
+.accordion-item button {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+}
+
+.accordion-body {
+    border-radius: 0 0 10px 10px;
+    background: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+}
+
+.accordion-button {
+    font-size: 0.8rem;
+    background: transparent;
+    outline: none;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    font-weight: 500;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e59b30 !important;
+    border-radius: 10px 10px 0 0 !important;
+    color: black;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: none;
+    content: "\f0d7";
+    font-family: fontawesome;
+    width: auto;
+    height: auto;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+}
+
+#contact {
+    padding-block: 100px;
 }
 
 .contact-container {
     margin-block: 150px;
+}
+
+.shape-atas {
+    background-image: url(../images/shape/bg-shape-atas.png),
+        url(../images/shape/bg-shape-bawah.png);
+    background-position: top right, bottom left; /* Gambar akan ditempatkan di pojok kanan atas */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+}
+
+.contact-container .row {
+    margin-top: 50px;
 }
 
 .contact-container hr {
@@ -443,7 +519,9 @@ ul a {
 }
 
 .copyright-container {
+    background-color: var(--primary-color);
     padding-block: 30px;
+    margin-right: 0;
 }
 
 .copyright-container p {
@@ -454,7 +532,7 @@ ul a {
 }
 
 .copyright-container p a {
-    color: #fff;
+    color: white;
 }
 
 .social-media a {
@@ -462,14 +540,21 @@ ul a {
 }
 
 .social-media p {
-    color: #f2d022;
+    color: var(--primary-color);
 }
 
-.sosmed {
-    background-color: #f2d022;
+/* .sosmed {
+    background-color: var(--primary-color);
     border-radius: 10px;
-    height: 40px;
+} */
+
+.sosmed {
+    background-color: var(--primary-color);
+    padding: 10px;
     width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 .sosmed svg {
@@ -628,3 +713,64 @@ ul a {
 .acara-container .content-bawah img {
     margin-left: 20px;
 }
+
+/* Menu Informasi */
+#informasi {
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+
+.shape-bawah {
+    background-image: url(../images/shape/bg-shape-informasi.png);
+    background-position: bottom right; /* Gambar akan ditempatkan di pojok kanan atas */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+}
+
+#informasi .content {
+    padding-left: 90px;
+}
+
+#informasi .content hr {
+    width: 100%;
+    color: black !important;
+    background-color: black !important;
+    height: 1px !important;
+    opacity: 100 !important;
+}
+
+#informasi .content-samping {
+    padding-right: 90px;
+}
+
+#informasi img.berita {
+    width: 100%;
+    min-height: 424px;
+}
+
+#informasi p.description {
+    color: #444444;
+    font-size: 18px;
+}
+
+#informasi .content-samping img {
+    width: 100%;
+    min-height: 150px;
+    border-radius: 10px;
+}
+
+#informasi .content-samping p.title {
+    font-size: 22px !important;
+}
+
+#informasi .content-samping p.date {
+    color: #95999e;
+    font-size: 14px;
+}
+
+#informasi .content-samping button.btn {
+    color: #fff;
+    background-color: #124c6b;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+/* Menu Informasi End */

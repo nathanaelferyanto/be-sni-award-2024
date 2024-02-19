@@ -6,7 +6,12 @@
     <title>SNI Award 2024</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/bootstrap-5.3.2/css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
 
     <!-- Arimo Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,15 +75,15 @@
                 </div>
                 
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="/"
                     >Beranda</a
                   >
-                  <a class="nav-link" href="#">Informasi</a>
-                  <a class="nav-link" href="#">Unduh</a>
-                  <a class="nav-link" href="#">Linimasa</a>
-                  <a class="nav-link" href="#">Acara</a>
-                  <a class="nav-link" href="#">FAQ</a>
-                  <a class="nav-link" href="#">Kontak</a>
+                  <a class="nav-link {{ request()->is('informasi') ? 'active' : '' }}" href="/informasi">Informasi</a>
+                  <a class="nav-link {{ request()->is('unduh') ? 'active' : '' }}" href="/unduh">Unduh</a>
+                  <a class="nav-link {{ request()->is('linimasa') ? 'active' : '' }}" href="/linimasa">Linimasa</a>
+                  <a class="nav-link {{ request()->is('acara') ? 'active' : '' }}" href="/acara">Acara</a>
+                  <a class="nav-link {{ request()->is('faq') ? 'active' : '' }}" href="/faq">FAQ</a>
+                  <a class="nav-link {{ request()->is('kontak') ? 'active' : '' }}" href="/kontak">Kontak</a>
                 </div>
               </div>
               
@@ -92,7 +97,7 @@
     </header>
     @yield('content')
     <footer>
-        <div class="row">
+        <div class="row m-0">
           <div class="col-6">
             <div class="row ms-5 align-items-center">
               <div class="col-3 text-start">
@@ -130,33 +135,31 @@
                   ><p><img src="{{ asset('assets') }}/images/icon/link.svg" alt="" /> www.bsn.go.id</p></a
                 >
               </div>
-              <div class="sosmed-container row ps-4">
+              <div class="sosmed-container row">
                 <div
-                  class="sosmed col-3 me-2 d-flex justify-content-center align-items-center"
+                  class="sosmed col-3 d-flex justify-content-center align-items-center"
                 >
                   <i data-feather="twitter"></i>
                 </div>
                 <div
-                  class="sosmed col-3 d-flex justify-content-center align-items-center me-2"
+                  class="sosmed col-3 d-flex justify-content-center align-items-center"
                 >
                   <i data-feather="instagram"></i>
                 </div>
                 <div
-                  class="sosmed col-3 d-flex justify-content-center align-items-center me-2"
+                  class="sosmed col-3 d-flex justify-content-center align-items-center"
                 >
                   <i data-feather="facebook"></i>
                 </div>
                 <div
-                  class="sosmed col-3 d-flex justify-content-center align-items-center me-2"
+                  class="sosmed col-3 d-flex justify-content-center align-items-center"
                 >
                   <i data-feather="youtube"></i>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="copyright-container col-12 mt-3 bg-warning text-center align-items-center"
-          >
+          <div class="copyright-container col-12 mt-3 text-center align-items-center">
             <p class="m-0">
               Copyright © 2024. All Rights Reserved by
               <a href="">Badan Standardisasi Nasional</a>
@@ -169,8 +172,16 @@
       feather.replace();
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="{{ asset('assets') }}/bootstrap-5.3.2/js/bootstrap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
     <script src="{{ asset('assets') }}/js/owl.carousel.min.js"></script>
     <script src="{{ asset('assets') }}/js/script.js"></script>
   </body>

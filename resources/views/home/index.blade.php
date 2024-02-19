@@ -292,8 +292,7 @@
   </article>
 
   <!-- FAQ 1 - Bootstrap Brain Component -->
-  <!-- FAQ 1 - Bootstrap Brain Component -->
-<section class="py-3 py-md-5">
+<!-- <section class="py-3 py-md-5">
   <div class="container">
     <div class="row gy-5 gy-lg-0 align-items-lg-center">
       <div class="col-6">
@@ -354,16 +353,113 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-  <article id="contact">
+  <article id="contact" class="shape-atas">
     <div class="contact-container">
       <div class="title">
-        <h1>Tinggal Balasan di Sini</h1>
+        <h1>Requently Asked Questions</h1>
         <hr class="mx-0" />
       </div>
-      <div class="row justify-content-center">
-        <div class="col-6">
+      <div class="row">
+        <div class="faq-container col-6">
+          <div class="accordion w-75" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                Dari mana anda memperoleh informasi tentang SNI Award 
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is
+                  shown by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                Apa yang dimaksud SN Award
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                Apa saja kategori SNI Award
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-6">
           <form>
             <div class="row mb-3 justify-content-center">
               <div class="input-container col-12">
@@ -414,7 +510,7 @@
               Kirim Komentar
             </button>
           </form>
-        </div>
+        </div> -->
         <div class="col-6 text-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.97659708331!2d106.82049436920713!3d-6.236432029161127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36a70592c2d%3A0xb7e21ff0384fde0d!2sBadan%20Standardisasi%20Nasional%20(BSN)!5e0!3m2!1sid!2sid!4v1707458886395!5m2!1sid!2sid"
@@ -429,5 +525,6 @@
       </div>
     </div>
   </article>
+
 </main>
 @endsection('content')
