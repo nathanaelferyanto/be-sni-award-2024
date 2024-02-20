@@ -1,34 +1,40 @@
 @extends('layouts.master')
 
 @section('content')
-<main>
+<main\>
   <article id="jumbotron" class="bg-theme">
-    <div class="row" id="container-jumbotron">
-      <div class="title-container col-8">
-        <h1>
-          Selamat Datang di Website
-          <span>SNI Award 2024</span>
-        </h1>
-        <p>
-          SNI Award dicanangkan sebagai The National Quality Award of
-          <br />Indonesia sejak tahun 2005
-        </p>
-      </div>
-      <div class="image-container col-4">
-        <img src="{{ asset('assets') }}/images/icon/Frame 2.png" class="w-100" alt="" />
-      </div>
-      <div class="card-container row">
-        <div class="card col-3 align-content-center">
-          <img src="{{ asset('assets') }}/images/icon/buku-biru.svg" alt="" />
-          <p>Seputar SNI Award</p>
+    <div id="container-jumbotron" style="margin-top: -60px;">
+      <div class="row ">
+        <div class="title-container col-8 d-flex flex-column justify-content-center ">
+          <h1>
+            Selamat Datang di Website
+            <span>SNI Award 2024</span>
+          </h1>
+          <p>
+            SNI Award dicanangkan sebagai The National Quality Award of
+            <br />Indonesia sejak tahun 2005
+          </p>
         </div>
-        <div class="card col-3">
-          <img src="{{ asset('assets') }}/images/icon/juri-biru.svg" alt="" />
-          <p>Dewan Juri SNI Award</p>
+        <div class="image-container col-4 ">
+          <img src="{{ asset('assets') }}/images/icon/Frame 2.png" class="w-100" alt="" />
         </div>
-        <div class="card col-3">
-          <img src="{{ asset('assets') }}/images/icon/medali-biru.svg" alt="" />
-          <p>Peraih SNI Award</p>
+      </div>
+      <br>
+      <br>
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="card-container d-flex align-items-center justify-content-center">
+          <div class="card">
+            <img src="{{ asset('assets') }}/images/icon/buku-biru.svg" alt="" />
+            <p>Seputar SNI Award</p>
+          </div>
+          <div class="card">
+            <img src="{{ asset('assets') }}/images/icon/juri-biru.svg" alt="" />
+            <p>Dewan Juri SNI Award</p>
+          </div>
+          <div class="card">
+            <img src="{{ asset('assets') }}/images/icon/medali-biru.svg" alt="" />
+            <p>Peraih SNI Award</p>
+          </div>
         </div>
       </div>
     </div>
@@ -63,12 +69,6 @@
               >
                 <img src="{{ asset('assets') }}/images/dokumentasi/berita.png" alt="" />
               </div>
-              <!-- <h5 class="mb-0 text-center"><b>HTML CSS3 Tutorials</b></h5>
-              <p class="text-center p-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
-                temporibus quidem magni qui doloribus quasi natus inventore nisi
-                velit minima.
-              </p> -->
             </div>
             <div class="slider-card">
               <div
@@ -106,9 +106,11 @@
 
   <article id="news">
     <div class="artikel-container row">
-      <div class="title-container col-12">
-        <h1>Artikel</h1>
-        <hr class="mx-0" />
+      <div class="col-12 d-flex align-items-center justify-content-start">
+        <div class="title-container d-flex flex-column align-items-center justify-content-center">
+          <h1 style="text-align: left;">Artikel</h1>
+          <hr class="mx-0" style="width: 120px;"/>
+        </div>
       </div>
       <div class="content-container col-6">
         <div class="content row">
@@ -163,41 +165,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="col-6">
-        <h2>Berita Terkini</h2>
-      </div>
-      <div class="col-6">
-        <h3>Seminar Nasional Peringatan Hari Standar Dunia</h3>
-      </div>
-      <div class="col-6">
-        <img
-          src="{{ asset('assets') }}/images/icon/berita-terkini.png"
-          class="w-100 rounded-3 gambar-berita"
-          alt="Berita Terkini"
-        />
-      </div>
-      <div class="col-6">
-        <div class="align-content-center">
-          <p class="text-start">1 Hour Ago</p>
-          <p class="text-start">Ditinjau oleh <span>Shinta Arafah</span></p>
-        </div>
-        <p>
-          BSN akan mengadakan Seminar Nasional dalam rangka Peringatan Hari
-          Standar Dunia dan Bulan Mutu Nasional (BMN) 2021. Seminar akan
-          dilaksanakan pada bulan November 2021 di Bandung. Acara akan
-          dilaksanakan baik secara tatap muka dengan menerapkan protokol
-          kesehatan maupun daring. PIC Kegiatan: Direktorat Penguatan
-          Standar dan Penilaian Kesesuaian baca selengkapnya.
-        </p>
-        <div class="row">
-          <div class="col-2 border">SNIBSN</div>
-          <div class="col-2 border">SNIAWards2023</div>
-          <div class="col-2 border">#BerkasSNI</div>
-          <div class="col-2 border">#Kriteria</div>
-          <div class="col-2 border">#KegiatanBSN</div>
-        </div>
-      </div> -->
     </div>
 
     <div class="news-container">
@@ -290,70 +257,6 @@
       </div>
     </div>
   </article>
-
-  <!-- FAQ 1 - Bootstrap Brain Component -->
-<!-- <section class="py-3 py-md-5">
-  <div class="container">
-    <div class="row gy-5 gy-lg-0 align-items-lg-center">
-      <div class="col-6">
-        <div class="row justify-content-xl-end">
-          <div class="col-12 col-xl-11">
-            <div class="accordion accordion-flush" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    How Do I Change My Billing Information?
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>To change your billing information, please follow these steps:</p>
-                    <ul>
-                      <li>Go to our website and sign in to your account.</li>
-                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
-                      <li>Under the "Billing Information" section, click on "Edit."</li>
-                      <li>Make your changes and click on "Save."</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    How Does Payment System Work?
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    How Do I Cancel My Account?
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>To cancel your account, please follow these steps:</p>
-                    <ul>
-                      <li>Go to our website and sign in to your account.</li>
-                      <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
-                      <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
-                      <li>Enter your password and click on "Cancel Account."</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
   <article id="contact" class="shape-atas">
     <div class="contact-container">
