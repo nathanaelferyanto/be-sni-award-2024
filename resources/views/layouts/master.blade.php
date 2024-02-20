@@ -44,58 +44,53 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="row ms-5">
-        <!-- <div class="logo col-2">
-          <a href=""
-            ><img src="{{ asset('assets') }}/images/icon/logo-sniaward.svg" alt="Logo SNI Award"
-          /></a>
-        </div> -->
-        <nav class="navbar navbar-expand-lg col-12 px-4">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="navbarNavAltMarkup"
-            >
-              <div class="navbar-container py-2 px-4 d-flex align-items-center"> 
-                <div class="logo-container me-5">
-                  <a href=""><img src="{{ asset('assets') }}/images/icon/logo-bsn.svg" class="logo-bsn ms-2" alt="Logo BSN"/></a>
-                  <a href=""><img src="{{ asset('assets') }}/images/icon/logo-sniaward.svg" class="logo-sniaward ms-2" alt="Logo SNI Award"/></a>
-                </div>
-                
-                <div class="navbar-nav">
-                  <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="/"
-                    >Beranda</a
-                  >
-                  <a class="nav-link {{ request()->is('informasi') ? 'active' : '' }}" href="/informasi">Informasi</a>
-                  <a class="nav-link {{ request()->is('unduh') ? 'active' : '' }}" href="/unduh">Unduh</a>
-                  <a class="nav-link {{ request()->is('linimasa') ? 'active' : '' }}" href="/linimasa">Linimasa</a>
-                  <a class="nav-link {{ request()->is('acara') ? 'active' : '' }}" href="/acara">Acara</a>
-                  <a class="nav-link {{ request()->is('faq') ? 'active' : '' }}" href="/faq">FAQ</a>
-                  <a class="nav-link {{ request()->is('kontak') ? 'active' : '' }}" href="/kontak">Kontak</a>
-                </div>
+    <header class="header">
+      
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid ">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-container py-2 px-4 d-flex align-items-center justify-content-between"> 
+              <div class="logo-container me-5">
+                <a href=""><img src="{{ asset('assets') }}/images/icon/logo-bsn.svg" class="logo-bsn ms-2" alt="Logo BSN"/></a>
+                <a href=""><img src="{{ asset('assets') }}/images/icon/logo-sniaward.svg" class="logo-sniaward ms-2" alt="Logo SNI Award"/></a>
               </div>
               
-              <div class="icon-navbar collapse navbar-collapse ms-4">
-            <a href="#"><img src="{{ asset('assets') }}/images/icon/user.svg" alt="" /></a>
-          </div>
+              <div class="navbar-nav">
+                <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="/"
+                  >Beranda</a
+                >
+                <a class="nav-link {{ request()->is('informasi') ? 'active' : '' }}" href="/informasi">Informasi</a>
+                <a class="nav-link {{ request()->is('unduh') ? 'active' : '' }}" href="/unduh">Unduh</a>
+                <a class="nav-link {{ request()->is('linimasa') ? 'active' : '' }}" href="/linimasa">Linimasa</a>
+                <a class="nav-link {{ request()->is('acara') ? 'active' : '' }}" href="/acara">Acara</a>
+                <a class="nav-link {{ request()->is('faq') ? 'active' : '' }}" href="/faq">FAQ</a>
+                <a class="nav-link {{ request()->is('kontak') ? 'active' : '' }}" href="/kontak">Kontak</a>
+                <a class="nav-link" href="/login"><img src="{{ asset('assets') }}/images/icon/user.svg" alt="" style="width: 20px; filter:invert(1);"/></a>
+              </div>
             </div>
+
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+
     </header>
+    
     @yield('content')
+
     <footer>
         <div class="row m-0">
           <div class="col-6">

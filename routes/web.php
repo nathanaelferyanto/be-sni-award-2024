@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 //     echo "Hallo gaes";
 // });
 
-Route::get('', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/informasi', [InformationController::class, 'index']);
 

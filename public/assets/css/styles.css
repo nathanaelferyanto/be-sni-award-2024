@@ -48,10 +48,21 @@ h1 {
     margin-top: -100px;
     z-index: 1000;
 } */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
 
 .navbar {
+    margin-top: 64px;
     position: fixed;
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
 }
 
 .navbar-container {
@@ -63,27 +74,28 @@ h1 {
 
 .navbar-nav a {
     color: black;
-    font-size: 20px;
+    font-size: 16px;
     margin-inline: 10px;
 }
 
 .nav-link {
-    padding-inline: 15px !important;
+    padding: 8px 15px !important;
 }
 
 .navbar-nav a.active {
     background-color: var(--primary-color);
-    border-radius: 15px;
+    border-radius: 8px;
+    /* padding-inline: 10px; */
     color: white !important;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .logo-container .logo-bsn {
-    height: 60px;
+    height: 25px;
 }
 
 .logo-container .logo-sniaward {
-    height: 70px;
+    height: 30px;
 }
 
 .bg-theme {

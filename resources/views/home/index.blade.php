@@ -1,34 +1,40 @@
 @extends('layouts.master')
 
 @section('content')
-<main>
+<main\>
   <article id="jumbotron" class="bg-theme">
-    <div class="row" id="container-jumbotron">
-      <div class="title-container col-8">
-        <h1>
-          Selamat Datang di Website
-          <span>SNI Award 2024</span>
-        </h1>
-        <p>
-          SNI Award dicanangkan sebagai The National Quality Award of
-          <br />Indonesia sejak tahun 2005
-        </p>
-      </div>
-      <div class="image-container col-4">
-        <img src="{{ asset('assets') }}/images/icon/Frame 2.png" class="w-100" alt="" />
-      </div>
-      <div class="card-container row">
-        <div class="card col-3 align-content-center">
-          <img src="{{ asset('assets') }}/images/icon/buku-biru.svg" alt="" />
-          <p>Seputar SNI Award</p>
+    <div id="container-jumbotron" style="margin-top: -60px;">
+      <div class="row ">
+        <div class="title-container col-8 d-flex flex-column justify-content-center ">
+          <h1>
+            Selamat Datang di Website
+            <span>SNI Award 2024</span>
+          </h1>
+          <p>
+            SNI Award dicanangkan sebagai The National Quality Award of
+            <br />Indonesia sejak tahun 2005
+          </p>
         </div>
-        <div class="card col-3">
-          <img src="{{ asset('assets') }}/images/icon/juri-biru.svg" alt="" />
-          <p>Dewan Juri SNI Award</p>
+        <div class="image-container col-4 ">
+          <img src="{{ asset('assets') }}/images/icon/Frame 2.png" class="w-100" alt="" />
         </div>
-        <div class="card col-3">
-          <img src="{{ asset('assets') }}/images/icon/medali-biru.svg" alt="" />
-          <p>Peraih SNI Award</p>
+      </div>
+      <br>
+      <br>
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="card-container d-flex align-items-center justify-content-center">
+          <div class="card">
+            <img src="{{ asset('assets') }}/images/icon/buku-biru.svg" alt="" />
+            <p>Seputar SNI Award</p>
+          </div>
+          <div class="card">
+            <img src="{{ asset('assets') }}/images/icon/juri-biru.svg" alt="" />
+            <p>Dewan Juri SNI Award</p>
+          </div>
+          <div class="card">
+            <img src="{{ asset('assets') }}/images/icon/medali-biru.svg" alt="" />
+            <p>Peraih SNI Award</p>
+          </div>
         </div>
       </div>
     </div>
@@ -106,9 +112,11 @@
 
   <article id="news">
     <div class="artikel-container row">
-      <div class="title-container col-12">
-        <h1>Artikel</h1>
-        <hr class="mx-0" />
+      <div class="col-12 d-flex align-items-center justify-content-start">
+        <div class="title-container d-flex flex-column align-items-center justify-content-center">
+          <h1 style="text-align: left;">Artikel</h1>
+          <hr class="mx-0" style="width: 120px;"/>
+        </div>
       </div>
       <div class="content-container col-6">
         <div class="content row">
