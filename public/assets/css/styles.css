@@ -508,7 +508,7 @@ h2.accordion-header {
 /* Footer */
 footer p {
     color: #2b2b28;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -590,22 +590,27 @@ ul a {
     border-radius: 37px;
     box-shadow: 6px 6px 15px 10px rgba(0, 0, 0, 0.25);
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-container .content-kiri {
+    width: 60%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--primary-color); */
 }
 
 .login-container .content-kiri img {
-    width: 506px;
+    height: 100%;
 }
 
 .login-container .content-kanan {
+    width: 40%;
     border-radius: 37px;
-    background-color: #d9aa1e;
+    background-color: var(--primary-color);
     color: white;
     display: flex;
     flex-direction: column;
