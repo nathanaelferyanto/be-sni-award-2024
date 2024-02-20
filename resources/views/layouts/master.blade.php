@@ -155,7 +155,7 @@
             </div>
           </div>
           <div class="copyright-container col-12 mt-3 text-center align-items-center">
-            <p class="m-0">
+            <p class="m-0 fs-6">
               Copyright © 2024. All Rights Reserved by
               <a href="">Badan Standardisasi Nasional</a>
             </p>
