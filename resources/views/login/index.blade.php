@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/bootstrap-5.3.2/css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
 
     <!-- Arimo Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +32,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('assets') }}/css/styles.css" />
   </head>
   <body>
     <section id="login">
