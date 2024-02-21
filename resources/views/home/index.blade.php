@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<main\>
+<main>
   <article id="jumbotron" class="bg-theme">
     <div id="container-jumbotron" style="margin-top: -60px;">
       <div class="row ">
