@@ -10,12 +10,12 @@ class KategoriBeritaController extends Controller
     public function index()
     {
         $kategori_berita = KategoriBerita::all();
-        return view('pages.kategori_berita.index',compact(['kategori_berita']));
+        return view('admin.kategori_berita.index',compact(['kategori_berita']));
     }
 
     public function create()
     {
-        return view('pages.kategori_berita.create');
+        return view('admin.kategori_berita.create');
     }
 
     public function store(Request $request)

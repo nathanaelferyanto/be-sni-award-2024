@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 
 @section('content')
 <div class="row">
@@ -17,16 +17,9 @@
               </ul>
             </div>
           @endif
-            <form action="/beritas/{{$berita->id}}/edit" method="POST">
+            <form action="/berita/{{$berita->id}}/edit" method="POST">
                 @method('put')
                 @csrf
-                {{-- <div class="form-group">
-                  <label for="exampleInputEmail1">Kategori</label>
-                  <select name="kategori" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pilih Kategori">
-                    <option>Pilih kategori</option>
-                    <option value="SNI Award 2024">SNI Award 2024</option>
-                  </select>
-                </div> --}}
                 <div class="form-group">
                   <label for="exampleInputEmail1">Judul Berita</label>
                   <input name="judul_berita" type="string" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tambahkan Judul" value="{{$berita->judul_berita}}">

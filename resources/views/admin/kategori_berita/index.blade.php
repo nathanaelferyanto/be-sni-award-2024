@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 
 @section('content')
 <div class="row">
@@ -6,7 +6,7 @@
       <div class="card mb-4">
         <div class="card-header pb-0">
           <h6>Kategori</h6>
-          <a href="/kategori_berita/create" class="btn btn-primary float-end">Tambah</a>
+          <a href="/kategori_berita/tambah" class="btn btn-primary float-end">Tambah</a>
         </div>
         <div class="card-body px-0 pt-0 pb-2">
           <div class="table-responsive p-0">
@@ -31,12 +31,6 @@
                   </td>
                 </tr>
                 @endforeach
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
               </tbody>
             </table>
           </div>
