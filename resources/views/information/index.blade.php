@@ -2,9 +2,11 @@
 
 @section('content')
 <article id="informasi" class="shape-bawah">
-    <div class="row m-0 d-flex">
+    <div class="content row" style="max-width: 100%">
+        <h3 class="col-7">Seminar Nasional Peringatan Hari Standar Dunia</h3>
+    </div>
+    <div class="row m-0 d-flex" style="max-width: 100%">
         <div class="content col-7">
-            <h3>Seminar Nasional Peringatan Hari Standar Dunia</h3>
             <hr>
             <div class="row float-end mb-4">
                 <div class="d-flex mb-2">

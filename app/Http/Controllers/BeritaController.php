@@ -13,13 +13,13 @@ class BeritaController extends Controller
     {
         $berita = Berita::all();
         // dd($berita);
-        return view('pages.berita.index',compact(['berita']));
+        return view('admin.berita.index',compact(['berita']));
     }
     public function create()
     {
         $kategori = DB::table('kategori_berita')->get('nama');
         // dd($kategori);
-        return view('pages.berita.create', compact(['kategori']));
+        return view('admin.berita.create', compact(['kategori']));
     }
     public function store(Request $request)
     {
@@ -43,7 +43,7 @@ class BeritaController extends Controller
 
     public function edit($id){
         $berita = Berita::find($id);
-        return view('pages.berita.edit',[
+        return view('admin.berita.edit',[
             'berita' => $berita
         ]);
     }
