@@ -1,6 +1,6 @@
 <!-- resources/views/berita/show.blade.php -->
 
-@extends('layouts.app')
+@extends('admin.layouts.master')
 
 @section('content')
     <div class="container">
