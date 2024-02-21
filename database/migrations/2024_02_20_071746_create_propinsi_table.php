@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tag', function (Blueprint $table) {
-            $table->smallIncrements('id');
-            $table->string('nama');
+        Schema::create('propinsi', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tag');
+        Schema::dropIfExists('propinsi');
     }
 };

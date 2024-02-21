@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tag', function (Blueprint $table) {
-            $table->smallIncrements('id');
+        Schema::create('kota', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->tinyInteger('propinsi_id')->unsigned();
             $table->string('nama');
+            $table->timestamps();
+            $table->foreign('propinsi_id')->references('id')->on('propinsi');
         });
     }
 
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tag');
+        Schema::dropIfExists('kota');
     }
 };

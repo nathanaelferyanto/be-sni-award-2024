@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kategori_berita', function (Blueprint $table) {
-            $table->tinyIncrements('id');
+        Schema::create('peserta_kontak', function (Blueprint $table) {
+            $table->integerIncrements('id');
+            $table->integer('peserta_id')->unsigned();
             $table->string('nama');
+            $table->string('no_hp');
+            $table->string('jabatan');
             $table->timestamps();
+
+            $table->foreign('peserta_id')->references('id')->on('peserta');
         });
     }
 
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kategori_berita');
+        Schema::dropIfExists('peserta_kontak');
     }
 };
