@@ -10,6 +10,10 @@ body {
     padding: 0;
     /* overflow-x: hidden; */
 }
+.main-content{
+    margin-top: 100px;
+    max-width: 100dvw;
+}
 
 #about,
 #news,
@@ -21,7 +25,7 @@ body {
 
 #container-jumbotron {
     margin-inline: 85px;
-    padding-top: 170px;
+    padding-top: 70px;
 }
 
 /* #dokumentasi {
@@ -508,7 +512,7 @@ h2.accordion-header {
 /* Footer */
 footer p {
     color: #2b2b28;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -575,6 +579,8 @@ ul a {
 
 /* Login Page */
 #login {
+    width: 100dvw;
+    height: 100dvh;
     padding-block: 60px;
     padding-inline: 160px;
     background-image: url("../images/icon/Vector\ 7.svg");
@@ -587,25 +593,33 @@ ul a {
 }
 
 .login-container {
+    width: 100%;
+    height: 100%;
     border-radius: 37px;
     box-shadow: 6px 6px 15px 10px rgba(0, 0, 0, 0.25);
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-container .content-kiri {
+    width: 60%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--primary-color); */
 }
 
 .login-container .content-kiri img {
-    width: 506px;
+    height: 100%;
 }
 
 .login-container .content-kanan {
+    width: 40%;
+    height: 100%;
     border-radius: 37px;
-    background-color: #d9aa1e;
+    background-color: var(--primary-color);
     color: white;
     display: flex;
     flex-direction: column;
@@ -614,29 +628,32 @@ ul a {
 }
 
 .login-container .content-kanan img {
-    width: 193px;
-    height: 191px;
+    width: 35%;
 }
 
 .login-container .content-kanan h1 {
     font-weight: bold;
-    font-size: 43px;
+    font-size: 30px;
 }
 
 .login-container .content-kanan form label {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
+}
+.login-container .content-kanan form{
+    width: 100%;
+    padding: 0 30px;
 }
 
 .login-container .content-kanan form input {
     border-radius: 37px;
-    width: 357px;
-    height: 60px;
+    width: 100%;
+    height: 40px;
 }
 
 .login-container .content-kanan form .form-text {
     color: white;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .login-container .content-kanan form .form-text a {
@@ -728,8 +745,8 @@ ul a {
 
 /* Menu Informasi */
 #informasi {
-    padding-top: 170px;
     padding-bottom: 170px;
+    max-width: 100%;
 }
 
 .shape-bawah {
