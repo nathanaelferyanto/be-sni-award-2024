@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeControllerPeserta;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\KategoriBeritaController;
 use App\Http\Controllers\LoginController;
@@ -25,6 +26,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/informasi', [InformationController::class, 'index']);
+Route::get('/peserta', [HomeControllerPeserta::class, 'index']);
+
 
 //berita
 Route::get('/berita',[BeritaController::class,'index']);
