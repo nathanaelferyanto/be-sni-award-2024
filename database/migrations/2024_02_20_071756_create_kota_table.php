@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('kota', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->tinyInteger('propinsi_id')->unsigned();
+            $table->string('nama');
             $table->timestamps();
+            $table->foreign('propinsi_id')->references('id')->on('propinsi');
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('kota');
     }
 };
