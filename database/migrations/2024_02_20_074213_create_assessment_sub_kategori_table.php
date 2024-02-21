@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('assessment_sub_kategori', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->tinyInteger('assessment_kategori_id')->unsigned();
+            $table->foreign('assessment_kategori_id')->references('id')->on('assessment_kategori');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('assessment_sub_kategori');
     }
 };
