@@ -44,6 +44,9 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/styles.css" />
   </head>
   <body>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> --}}
     <header class="header">
       
       <nav class="navbar navbar-expand-lg">
@@ -79,7 +82,12 @@
                 <a class="nav-link {{ request()->is('acara') ? 'active' : '' }}" href="/acara">Acara</a>
                 <a class="nav-link {{ request()->is('faq') ? 'active' : '' }}" href="/faq">FAQ</a>
                 <a class="nav-link {{ request()->is('kontak') ? 'active' : '' }}" href="/kontak">Kontak</a>
-                <a class="nav-link" href="/login"><img src="{{ asset('assets') }}/images/icon/user.svg" alt="" style="width: 20px; filter:invert(1);"/></a>
+                <a class="nav-link" href="/login">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#552525" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg>
+                </a>
+                {{-- <a class="nav-link" href="/login"></a> --}}
               </div>
             </div>
 
@@ -89,7 +97,9 @@
 
     </header>
     
-    @yield('content')
+    <main class="main-content">
+      @yield('content')
+    </main>
 
     <footer>
         <div class="row m-0">
