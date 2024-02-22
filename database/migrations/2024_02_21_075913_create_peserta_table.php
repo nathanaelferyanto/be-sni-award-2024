@@ -15,9 +15,11 @@ return new class extends Migration
             $table->integerIncrements('id');
             $table->string('nama');
             $table->string('email');
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('status', ['aktif', 'tidak aktif']);
             $table->tinyInteger('kategori_organisasi_id')->unsigned();
+            $table->rememberToken();
             $table->timestamps();
 
             $table->foreign('kategori_organisasi_id')->references('id')->on('kategori_organisasi');
