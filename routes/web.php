@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomeAdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeControllerPeserta;
+use App\Http\Controllers\HomePesertaController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfilPesertaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('', [HomeController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/informasi', [InformationController::class, 'index']);
-Route::get('/peserta', [HomeControllerPeserta::class, 'index']);
+Route::get('/admin', [HomeAdminController::class, 'index']);
+Route::get('/peserta',[HomePesertaController::class, 'index']);
+Route::get('/peserta/profil',[ProfilPesertaController::class, 'index']);
 
 
