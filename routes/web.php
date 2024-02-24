@@ -7,6 +7,7 @@ use App\Http\Controllers\HomePesertaController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfilPesertaController;
+use App\Http\Controllers\RiwayatPesertaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,6 @@ Route::get('/informasi', [InformationController::class, 'index']);
 Route::get('/admin', [HomeAdminController::class, 'index']);
 Route::get('/peserta',[HomePesertaController::class, 'index']);
 Route::get('/peserta/profil',[ProfilPesertaController::class, 'index']);
+Route::get('/peserta/riwayat', [RiwayatPesertaController::class, 'index']);
 
 

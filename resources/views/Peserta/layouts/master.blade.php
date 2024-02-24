@@ -69,11 +69,11 @@
         <a
           class="navbar-brand m-0"
           id="navbarBrand"
-          href="#"
+          href="/peserta"
         >
           <img
             src="{{ asset('assets') }}/images/icon/logo-sniaward.svg"
-            class="navbar-brand-img" style="width: 100px;"
+            class="navbar-brand-img" style="width: 100%; max-width: 100px; height: auto;"
             id="navbarBrandImg"
             alt="SNIAward 2024"
           />
@@ -83,7 +83,7 @@
       <div class="sidebar collapse navbar-collapse w-auto" id="sidebar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" id="navLink" href="../pages/dashboard.html">
+            <a class="nav-link active" id="navLink" href="/peserta">
               <div
                 class="icon-sm icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="navLink" href="#">
+            <a class="nav-link" id="navLink" href="/peserta/riwayat">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -103,7 +103,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="navLink" href="#">
+            <a class="nav-link" id="navLink" href="/peserta/pendaftaran">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -384,7 +384,14 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown d-flex px-2 align-items-center">
+              <li class="nav-item dropdown d-flex px-2 gap-1 align-items-center">
+                <a
+                  href="/peserta/profil"
+                  class="nav-link text-body p-0"
+                >
+                  <i class="fa fa-user-o me-sm-1"></i>
+                  <span class="d-sm-inline d-none me-sm-1 p-0"><b>Peserta</b></span>
+                </a>
                 <a
                   href="javascript:;"
                   class="nav-link text-body p-0"
@@ -392,8 +399,6 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i class="fa fa-user-o me-sm-1"></i>
-                  <span class="d-sm-inline d-none me-sm-1"><b>Peserta</b></span>
                   <i class="fa fa-caret-down"></i>
                 </a>
                 <ul
@@ -405,24 +410,14 @@
                       class="dropdown-item border-radius-md"
                       href="javascript:;"
                     >
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img
-                            src="../assets/img/team-2.jpg"
-                            class="avatar avatar-sm me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New message</span>
-                            from Laur
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            <i class="fa fa-clock me-1"></i>
-                            13 minutes ago
-                          </p>
-                        </div>
+                      <div class="d-flex justify-content-center">
+                        <i class="fa fa-user"></i>
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span>
+                          from Laursdsafa
+                        </h6>
                       </div>
+                      
                     </a>
                   </li>
                   <li class="mb-2">
@@ -430,23 +425,12 @@
                       class="dropdown-item border-radius-md"
                       href="javascript:;"
                     >
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img
-                            src="../assets/img/small-logos/logo-spotify.svg"
-                            class="avatar avatar-sm bg-gradient-dark me-3"
-                          />
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New album</span> by
-                            Travis Scott
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            <i class="fa fa-clock me-1"></i>
-                            1 day
-                          </p>
-                        </div>
+                      <div class="d-flex justify-content-center">
+                        <i class="fa fa-user"></i>
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span>
+                          from Laursdsafa
+                        </h6>
                       </div>
                     </a>
                   </li>

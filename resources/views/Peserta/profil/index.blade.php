@@ -31,7 +31,7 @@
                       <h6 class="mb-0">Nama Organisasi</h6>
                     </div>
                     <div class="col-md-8 pe-5">
-                      <input type="text" class="form-control form-control-lg" />
+                      <input type="text" class="form-control form-control-lg"/>
                     </div>
                 </div>
 
@@ -42,8 +42,9 @@
 
                   <div class="container col-md-8 pe-5">
                     <div class="input-group custom-file-button">
-                      <label class="input-group-text" for="inputGroupFile">Unggah</label>
-                      <input type="file" class="form-control form-control-lg" id="inputGroupFile">
+                      <label class="input-group-text px-4" for="inputGroupFile1">Unggah</label>
+                      <label class="label-unik px-4" id="file-input-label" for="inputGroupFile1">Maksimum upload file : 10 MB </label>
+                      <input type="file" class="form-control unik form-control-lg" id="inputGroupFile1">
                     </div>
                   </div>
                 </div>
@@ -55,8 +56,9 @@
                   
                   <div class="container col-md-8 pe-5">
                     <div class="input-group custom-file-button">
-                      <label class="input-group-text" for="inputGroupFile">Unggah</label>
-                      <input type="file" class="form-control form-control-lg" id="inputGroupFile">
+                      <label class="input-group-text px-4" for="inputGroupFile2">Unggah</label>
+                      <label class="label-unik px-4" id="file-input-label" for="inputGroupFile2">Maksimum upload file : 10 MB </label>
+                      <input type="file" class="form-control unik form-control-lg" id="inputGroupFile2">
                     </div>
                   </div>
                 </div>
@@ -68,8 +70,9 @@
 
                   <div class="container col-md-8 pe-5">
                     <div class="input-group custom-file-button">
-                      <label class="input-group-text" for="inputGroupFile">Unggah</label>
-                      <input type="file" class="form-control form-control-lg" id="inputGroupFile">
+                      <label class="input-group-text px-4" for="inputGroupFile3">Unggah</label>
+                      <label class="label-unik px-4" id="file-input-label" for="inputGroupFile3">Maksimum upload file : 10 MB </label>
+                      <input type="file" class="form-control unik form-control-lg" id="inputGroupFile3">
                     </div>
                   </div>
                 </div>

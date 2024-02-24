@@ -60,3 +60,17 @@ barsMenu.addEventListener("click", function (event) {
 $(function () {
     rome(inputCalendar, { time: false, inputFormat: "DD-MM-YYYY" });
 });
+
+const fileInput = document.getElementById("inputGroupFile1");
+
+const fileInputLabel = document.getElementById("file-input-label");
+
+fileInput.addEventListener("change", () => {
+    if (fileInput.value === "") {
+        fileInputLabel.innerHTML = "Select a file";
+    } else {
+        const realPathArray = fileInput.value.split("\\");
+
+        fileInputLabel.innerHTML = realPathArray[realPathArray.length - 1];
+    }
+});
