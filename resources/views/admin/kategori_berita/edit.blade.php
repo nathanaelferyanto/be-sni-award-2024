@@ -5,7 +5,7 @@
     <div class="col-12">
         <div class="card mb-4">
             <div class="card-header pb-0">
-                <h6>Tambah Kategori</h6>
+            <h6>Edit Berita</h6>
             </div>
             <div class="card-body px-3 pt-0 pb-2">
             @if($errors->any())
@@ -16,13 +16,14 @@
                     @endforeach
                 </ul>
                 </div>
-            @endif
-                <form action="{{ route('kategori_berita') }}" method="POST">
+                @endif
+                <form action="/admin/kategori_berita/{{$kategori_berita->id}}/update" method="POST">
                     @csrf
-                    <div class="form-group">
-                    <label>Nama Kategori</label>
-                    <input name="nama" type="string" class="form-control" value="{{ old('nama') }}">
-                    </div>
+                    @method('put')
+                        <div class="form-group">
+                        <label>Judul Berita</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Kategori Berita" value="{{$kategori_berita->nama}}">
+                        </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
