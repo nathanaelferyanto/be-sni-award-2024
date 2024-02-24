@@ -83,7 +83,7 @@
       <div class="sidebar collapse navbar-collapse w-auto" id="sidebar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" id="navLink" href="/peserta">
+            <a class="nav-link {{ request()->is('peserta') ? 'active' : '' }}" id="navLink" href="/peserta">
               <div
                 class="icon-sm icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="navLink" href="/peserta/riwayat">
+            <a class="nav-link {{ request()->is('peserta/riwayat') ? 'active' : '' }}" id="navLink" href="/peserta/riwayat">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -103,7 +103,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="navLink" href="/peserta/pendaftaran">
+            <a class="nav-link {{ request()->is('peserta/pendaftaran') ? 'active' : '' }}" id="navLink" href="/peserta/pendaftaran">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -573,6 +573,7 @@
       </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -592,7 +593,6 @@
 
     <!-- My JavaScript -->
     <script src="{{ asset('assets') }}/peserta/js/script.js"></script>
-
 </body>
 
 </html>

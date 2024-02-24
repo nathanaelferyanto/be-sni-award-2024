@@ -208,7 +208,7 @@
               <div class="card-body">
                 <div class="row align-items-center pt-4 pb-3">
                     <div class="col-md-4 ps-5">
-                      <h6 class="mb-0">Nama Organisasi</h6>
+                      <h6 class="mb-0">Nama Penghubung</h6>
                     </div>
                     <div class="col-md-8 pe-5">
                       <input type="text" class="form-control form-control-lg" />
