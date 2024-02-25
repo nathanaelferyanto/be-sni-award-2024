@@ -228,7 +228,9 @@ hr {
     font-weight: 700;
 }
 
-.tab-pane > div:first-child,
+.tab-pane .content-profil,
+.tab-pane .content-kontak,
+.tab-pane .content-ubah-password,
 .content-kontak-form {
     border-radius: 20px;
     background-color: white;
@@ -394,7 +396,7 @@ textarea:focus {
     position: relative;
 }
 
-#msform fieldset {
+.content-profil .fieldset {
     background: white;
     border: 0 none;
     border-radius: 0.5rem;
@@ -405,51 +407,16 @@ textarea:focus {
     position: relative;
 }
 
-#msform fieldset:not(:first-of-type) {
+.content-profil .fieldset:not(:first-of-type) {
     display: none;
 }
 
-/* #msform .action-button {
-    width: 100px;
-    background: #673ab7;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 0px 10px 5px;
-    float: right;
-} */
-
-/* #msform .action-button:hover,
-#msform .action-button:focus {
-    background-color: #311b92;
-} */
-
-/* #msform .action-button-previous {
-    width: 100px;
-    background: #616161;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px 10px 0px;
-    float: right;
-} */
-
-/* #msform .action-button-previous:hover,
-#msform .action-button-previous:focus {
-    background-color: #000000;
-} */
-
-fieldset h6 {
+.fieldset h5,
+.fieldset h6 {
     font-weight: bold;
 }
 
-fieldset a:hover {
+.fieldset a:hover {
     border: 1px solid var(--secondary-color) !important;
     background-color: var(--primary-color);
     color: white !important;
