@@ -52,7 +52,7 @@
                             <h6 class="mb-0">Nama Evaluator</h6>
                           </div>
                           <div class="col-md-8 pe-5">
-                            <input type="text" class="form-control form-control-lg" />
+                            <p class="form-control form-control-lg m-0">Bennefit</p>
                           </div>
                         </div>
 
@@ -60,10 +60,10 @@
                           <div class="col-md-4 ps-5">
                             <h6 class="mb-0">Nilai</h6>
                           </div>
-                          <div class="col-md-3 pe-5">
-                            <div class="input-group">
-                              <input type="text" class="form-control form-control-lg" />
-                              <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
+                          <div class="col-md-2">
+                            <div class="d-flex align-items-center gap-3">
+                              <p class="form-control form-control-lg m-0">192</p>
+                              <a href="" style="border: 1px solid #552525; color: #552525; padding-block: 0.5rem; font-size: 1.25rem;" class="form-control form-control-lg text-center "><i class="fa fa-download"></i></a>
                             </div>
                           </div>
                         </div>
@@ -73,7 +73,7 @@
                             <h6 class="mb-0 mt-2">Komentar</h6>
                           </div>
                           <div class="col-md-8 pe-5">
-                            <textarea class="form-control" rows="4"></textarea>
+                            <p class="form-control form-control-lg m-0" style="max-height: 120px; overflow-y: auto;">Bagus, tapi ada beberapa yang tidak sesuai Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                           </div>
                         </div>        
                       </div>
@@ -89,13 +89,13 @@
                     </fieldset>
                     
                     <fieldset>
-                    <div class="card-body pt-0 mt-0">
+                      <div class="card-body pt-0 mt-0">
                         <div class="row align-items-center pt-4 pb-3">
                           <div class="col-md-4 ps-5">
-                            <h6 class="mb-0">Nama Lead Evaluator</h6>
+                            <h6 class="mb-0">Nama Evaluator</h6>
                           </div>
                           <div class="col-md-8 pe-5">
-                            <input type="text" class="form-control form-control-lg" />
+                            <p class="form-control form-control-lg m-0">Bennefit</p>
                           </div>
                         </div>
 
@@ -103,10 +103,10 @@
                           <div class="col-md-4 ps-5">
                             <h6 class="mb-0">Nilai</h6>
                           </div>
-                          <div class="col-md-3 pe-5">
-                            <div class="input-group">
-                              <input type="text" class="form-control form-control-lg" />
-                              <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
+                          <div class="col-md-2">
+                            <div class="d-flex align-items-center gap-3">
+                              <p class="form-control form-control-lg m-0">192</p>
+                              <a href="" style="border: 1px solid #552525; color: #552525; padding-block: 0.5rem; font-size: 1.25rem;" class="form-control form-control-lg text-center "><i class="fa fa-download"></i></a>
                             </div>
                           </div>
                         </div>
@@ -116,7 +116,7 @@
                             <h6 class="mb-0 mt-2">Komentar</h6>
                           </div>
                           <div class="col-md-8 pe-5">
-                            <textarea class="form-control" rows="4"></textarea>
+                            <p class="form-control form-control-lg m-0" style="max-height: 120px; overflow-y: auto;">Bagus, tapi ada beberapa yang tidak sesuai Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                           </div>
                         </div>        
                       </div>
@@ -138,13 +138,13 @@
                     </fieldset>
 
                     <fieldset>
-                    <div class="card-body pt-0 mt-0">
+                      <div class="card-body pt-0 mt-0">
                         <div class="row align-items-center pt-4 pb-3">
                           <div class="col-md-4 ps-5">
-                            <h6 class="mb-0">Nama Sekretariat</h6>
+                            <h6 class="mb-0">Nama Evaluator</h6>
                           </div>
                           <div class="col-md-8 pe-5">
-                            <input type="text" class="form-control form-control-lg" />
+                            <p class="form-control form-control-lg m-0">Bennefit</p>
                           </div>
                         </div>
 
@@ -152,10 +152,10 @@
                           <div class="col-md-4 ps-5">
                             <h6 class="mb-0">Nilai</h6>
                           </div>
-                          <div class="col-md-3 pe-5">
-                            <div class="input-group">
-                              <input type="text" class="form-control form-control-lg" />
-                              <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
+                          <div class="col-md-2">
+                            <div class="d-flex align-items-center gap-3">
+                              <p class="form-control form-control-lg m-0">192</p>
+                              <a href="" style="border: 1px solid #552525; color: #552525; padding-block: 0.5rem; font-size: 1.25rem;" class="form-control form-control-lg text-center "><i class="fa fa-download"></i></a>
                             </div>
                           </div>
                         </div>
@@ -165,7 +165,7 @@
                             <h6 class="mb-0 mt-2">Komentar</h6>
                           </div>
                           <div class="col-md-8 pe-5">
-                            <textarea class="form-control" rows="4"></textarea>
+                            <p class="form-control form-control-lg m-0" style="max-height: 120px; overflow-y: auto;">Bagus, tapi ada beberapa yang tidak sesuai Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                           </div>
                         </div>        
                       </div>
