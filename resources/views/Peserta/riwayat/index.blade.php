@@ -19,184 +19,178 @@
 <div class="tab-content" id="tab-content">
   <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
     <div class="content-profil py-5">
-    <h3 class="text-center mb-0 pb-0" style="font-size: 150%; font-weight: bold;">Desk Evaluation</h3>
-      <div class="container mt-4">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-xl-12">
-            <div class="card" style="border-radius: 15px;">
-              <div class="card-body">
-                <form id="msform">
-                  <!-- progressbar -->
-                  <ul id="progressbar" class="d-flex justify-content-between">
-                    <li class="active" id="account">
-                      <strong>Evaluator</strong>
-                    </li>
-                    <li id="personal"><strong>Lead Evaluator</strong></li>
-                    <li id="payment"><strong>Sekretariat</strong></li>
-                  </ul>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated"
-                      role="progressbar"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                  <br />
-                  
-                  <!-- fieldsets -->
-                  <fieldset>
-                    <div class="card-body pt-0 mt-0">
-                      <div class="row align-items-center pt-4 pb-3">
-                        <div class="col-md-4 ps-5">
-                          <h6 class="mb-0">Nama Evaluator</h6>
-                        </div>
-                        <div class="col-md-8 pe-5">
-                          <input type="text" class="form-control form-control-lg" />
-                        </div>
-                      </div>
-
-                    <div class="row align-items-center pb-3">
-                      <div class="col-md-4 ps-5">
-                        <h6 class="mb-0">Nilai</h6>
-                      </div>
-                      <div class="col-md-3 pe-5">
-                        <div class="input-group">
-                          <input type="text" class="form-control form-control-lg" />
-                          <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
-                        </div>
-                      </div>
+      <h3 class="text-center mb-0 pb-0" style="font-size: 150%; font-weight: bold;">Desk Evaluation</h3>
+        <div class="container mt-4">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-xl-12">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body">
+                  <form id="msform">
+                    <!-- progressbar -->
+                    <ul id="progressbar" class="d-flex justify-content-between">
+                      <li class="active" id="account">
+                        <strong>Evaluator</strong>
+                      </li>
+                      <li id="personal"><strong>Lead Evaluator</strong></li>
+                      <li id="payment"><strong>Sekretariat</strong></li>
+                    </ul>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
                     </div>
-
-                    <div class="row pb-3">
-                      <div class="col-md-4 ps-5">
-                        <h6 class="mb-0 mt-2">Komentar</h6>
-                      </div>
-                      <div class="col-md-8 pe-5">
-                        <textarea class="form-control" rows="4"></textarea>
-                      </div>
-                    </div>        
-                  </div>
-                  
-                    <input
-                      type="button"
-                      name="next"
-                      class="btn next action-button float-end"
-                      value="Next"
-                      style="width: 13%;"
-                    />
+                    <br />
                     
-                  </fieldset>
-                  
-                  <fieldset>
-                    <div class="form-card">
-                      <div class="row">
-                        <div class="col-7">
-                          <h2 class="fs-title">Personal Information:</h2>
+                    <!-- fieldsets -->
+                    <fieldset>
+                      <div class="card-body pt-0 mt-0">
+                        <div class="row align-items-center pt-4 pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0">Nama Evaluator</h6>
+                          </div>
+                          <div class="col-md-8 pe-5">
+                            <input type="text" class="form-control form-control-lg" />
+                          </div>
                         </div>
-                        <div class="col-5">
-                          <h2 class="steps">Step 2 - 4</h2>
+
+                        <div class="row align-items-center pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0">Nilai</h6>
+                          </div>
+                          <div class="col-md-3 pe-5">
+                            <div class="input-group">
+                              <input type="text" class="form-control form-control-lg" />
+                              <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
+                            </div>
+                          </div>
                         </div>
+
+                        <div class="row pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0 mt-2">Komentar</h6>
+                          </div>
+                          <div class="col-md-8 pe-5">
+                            <textarea class="form-control" rows="4"></textarea>
+                          </div>
+                        </div>        
                       </div>
-                      <label class="fieldlabels">First Name: *</label>
-                      <input type="text" name="fname" placeholder="First Name" />
-                      <label class="fieldlabels">Last Name: *</label>
-                      <input type="text" name="lname" placeholder="Last Name" />
-                      <label class="fieldlabels">Contact No.: *</label>
-                      <input type="text" name="phno" placeholder="Contact No." />
-                      <label class="fieldlabels">Alternate Contact No.: *</label>
+                    
+                        <input
+                          type="button"
+                          name="next"
+                          class="btn next action-button float-end"
+                          value="Next"
+                          style="width: 13%;"
+                        />
+                      
+                    </fieldset>
+                    
+                    <fieldset>
+                    <div class="card-body pt-0 mt-0">
+                        <div class="row align-items-center pt-4 pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0">Nama Lead Evaluator</h6>
+                          </div>
+                          <div class="col-md-8 pe-5">
+                            <input type="text" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+
+                        <div class="row align-items-center pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0">Nilai</h6>
+                          </div>
+                          <div class="col-md-3 pe-5">
+                            <div class="input-group">
+                              <input type="text" class="form-control form-control-lg" />
+                              <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0 mt-2">Komentar</h6>
+                          </div>
+                          <div class="col-md-8 pe-5">
+                            <textarea class="form-control" rows="4"></textarea>
+                          </div>
+                        </div>        
+                      </div>
+
                       <input
-                        type="text"
-                        name="phno_2"
-                        placeholder="Alternate Contact No."
+                        type="button"
+                        name="next"
+                        class="btn next action-button float-end"
+                        value="Next"
+                        style="width: 13%;"
                       />
-                    </div>
-                    <input
-                      type="button"
-                      name="next"
-                      class="btn next action-button float-end"
-                      value="Next"
-                      style="width: 13%;"
-                    />
-                    <input
-                      type="button"
-                      name="previous"
-                      class="btn previous action-button-previous float-end me-3"
-                      value="Previous"
-                      style="width: 13%;"
-                    />
-                  </fieldset>
+                      <input
+                        type="button"
+                        name="previous"
+                        class="btn previous action-button-previous float-end me-3"
+                        value="Previous"
+                        style="width: 13%;"
+                      />
+                    </fieldset>
 
-                  <fieldset>
-                    <div class="form-card">
-                      <div class="row">
-                        <div class="col-7">
-                          <h2 class="fs-title">Image Upload:</h2>
+                    <fieldset>
+                    <div class="card-body pt-0 mt-0">
+                        <div class="row align-items-center pt-4 pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0">Nama Sekretariat</h6>
+                          </div>
+                          <div class="col-md-8 pe-5">
+                            <input type="text" class="form-control form-control-lg" />
+                          </div>
                         </div>
-                        <div class="col-5">
-                          <h2 class="steps">Step 3 - 4</h2>
+
+                        <div class="row align-items-center pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0">Nilai</h6>
+                          </div>
+                          <div class="col-md-3 pe-5">
+                            <div class="input-group">
+                              <input type="text" class="form-control form-control-lg" />
+                              <label class="input-group-text" style="background-color: #D7DAE3; border-radius: 0 15px 15px 0; border-right: 1px solid #9fafbf; border-top: 1px solid #9fafbf; border-bottom: 1px solid #9fafbf; color: #595959;"><i class="fa fa-download"></i></label>
+                            </div>
+                          </div>
                         </div>
+
+                        <div class="row pb-3">
+                          <div class="col-md-4 ps-5">
+                            <h6 class="mb-0 mt-2">Komentar</h6>
+                          </div>
+                          <div class="col-md-8 pe-5">
+                            <textarea class="form-control" rows="4"></textarea>
+                          </div>
+                        </div>        
                       </div>
-                      <label class="fieldlabels">Upload Your Photo:</label>
-                      <input type="file" name="pic" accept="image/*" />
-                      <label class="fieldlabels">Upload Signature Photo:</label>
-                      <input type="file" name="pic" accept="image/*" />
-                    </div>
-                    <input
-                      type="button"
-                      name="next"
-                      class="btn next action-button float-end"
-                      value="Submit"
-                      style="width: 13%;"
-                    />
-                    <input
-                      type="button"
-                      name="previous"
-                      class="btn previous action-button-previous float-end me-3"
-                      value="Previous"
-                      style="width: 13%;"
-                    />
-                  </fieldset>
-
-                  
-                </form>
-
-                <!-- <div class="row align-items-center pt-4 pb-3">
-                  <div class="col-md-4 ps-5">
-                    <h6 class="mb-0">Nama Organisasi</h6>
-                  </div>
-                  <div class="col-md-8 pe-5">
-                    <input type="text" class="form-control form-control-lg"/>
-                  </div>
-                </div>
-                <div class="row align-items-center pt-4 pb-3">
-                  <div class="col-md-4 ps-5">
-                    <h6 class="mb-0">Nilai</h6>
-                  </div>
-                  <div class="col-md-3 pe-5">
-                    <input type="text" class="form-control form-control-lg"/>
-                  </div>
-                </div>
-
-                <div class="row py-3">
-                  <div class="col-md-4 ps-5 mt-2">
-                    <h6 class="mb-0">Komentar</h6>
-                  </div>
-                  <div class="col-md-8 pe-5">
-                    <textarea class="form-control textarea-focus" rows="5"></textarea>
-                  </div>
-                </div>
-
-                <div class="px-5 py-4 d-flex justify-content-end gap-3">
-                  <button type="submit" class="btn nonactive" style="width: 13%;">Batal</button>
-                  <button type="submit" class="btn" style="width: 13%;">Simpan</button>
-                </div> -->
-              </div>  
+                      <input
+                        type="button"
+                        name="previous"
+                        class="btn previous action-button-previous float-end me-3"
+                        value="Previous"
+                        style="width: 13%;"
+                      />
+                    </fieldset>
+                  </form>
+                </div>  
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
+
+    
+    <div class="content-site-evaluation mt-4 py-5 gap-2 d-flex justify-content-center flex-column text-center">
+      <h3 class="mb-0 pb-0" style="font-size: 150%; font-weight: bold;">Site Evaluation</h3>
+      <span>Sedang Tahap penilaian Desk Evaluation. Harap Ditunggu!</span>
+    </div>
+    <hr class="p-0">
   </div>
     
 

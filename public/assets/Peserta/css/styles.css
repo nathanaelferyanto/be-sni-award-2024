@@ -236,9 +236,17 @@ hr {
     z-index: 0 !important;
 }
 
+.tab-pane .content-site-evaluation {
+    border-radius: 20px;
+    background-color: white;
+    position: relative !important;
+    z-index: 0 !important;
+}
+
 .tab-pane .content-profil,
 .tab-pane .content-kontak,
 .tab-pane .content-ubah-password,
+.tab-pane .content-site-evaluation,
 .content-kontak-form {
     padding-inline: 70px;
 }
@@ -301,6 +309,12 @@ hr {
     color: #9fafbf;
 }
 
+.content-site-evaluation span {
+    color: #9fafbf;
+    font-size: 112.5%;
+    font-weight: bold;
+}
+
 /* Form */
 input,
 textarea {
@@ -342,9 +356,9 @@ textarea {
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-.textarea-focus:focus {
-    border: 1px solid #c17d2d;
-    box-shadow: 0px 0px 1px 2px #e59b30;
+textarea:focus {
+    border: 1px solid #c17d2d !important;
+    box-shadow: 0px 0px 1px 2px #e59b30 !important;
 }
 
 .custom-file-button label:hover {
