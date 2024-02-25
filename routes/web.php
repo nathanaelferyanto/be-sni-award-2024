@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeControllerPeserta;
 use App\Http\Controllers\InformationController;
@@ -56,4 +57,12 @@ Route::prefix('admin')->group(function() {
     Route::get('/kategori_berita/{kategori_berita}/edit',[KategoriBeritaController::class,'edit'])->name('kategori_berita.edit');
     Route::put('/kategori_berita/{kategori_berita}',[KategoriBeritaController::class,'update'])->name('kategori_berita.update');
     Route::delete('/kategori_berita/{kategori_berita}',[KategoriBeritaController::class,'destroy'])->name('kategori_berita.destroy');
+
+    //berita
+    Route::get('/dokumen', [DokumenController::class, 'index'])->name('dokumen.index');
+    Route::get('/dokumen/tambah', [DokumenController::class, 'create'])->name('dokumen.create');
+    Route::post('/dokumen', [DokumenController::class, 'store'])->name('dokumen.store');
+    Route::get('/dokumen/{dokumen}/edit', [DokumenController::class, 'edit'])->name('dokumen.edit');
+    Route::put('/dokumen/{dokumen}', [DokumenController::class, 'update'])->name('dokumen.update');
+    Route::delete('/dokumen/{dokumen}', [DokumenController::class, 'destroy'])->name('dokumen.destroy');
 });
