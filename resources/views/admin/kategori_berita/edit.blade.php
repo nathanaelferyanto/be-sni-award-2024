@@ -17,7 +17,7 @@
                 </ul>
                 </div>
                 @endif
-                <form action="/admin/kategori_berita/{{$kategori_berita->id}}/update" method="POST">
+                <form action="{{ route('kategori_berita.update', $kategori_berita->id) }}" method="POST">
                     @csrf
                     @method('put')
                         <div class="form-group">

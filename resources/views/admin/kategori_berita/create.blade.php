@@ -17,7 +17,7 @@
                 </ul>
                 </div>
             @endif
-                <form action="{{ route('kategori_berita') }}" method="POST">
+                <form action="{{ route('kategori_berita.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
                     <label>Nama Kategori</label>

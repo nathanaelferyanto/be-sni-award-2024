@@ -32,6 +32,7 @@ Route::get('/informasi', [InformationController::class, 'index']);
 Route::get('/peserta', [HomeControllerPeserta::class, 'index']);
 
 Route::prefix('admin')->group(function() {
+
     // Tag Berita
     Route::get('/tag_berita', [TagBeritaController::class, 'index'])->name('tag_berita.index');
     Route::get('/tag_berita/tambah', [TagBeritaController::class, 'create'])->name('tag_berita.create');
@@ -40,20 +41,19 @@ Route::prefix('admin')->group(function() {
     Route::put('/tag_berita/{tag_berita}', [TagBeritaController::class, 'update'])->name('tag_berita.update');
     Route::delete('/tag_berita/{tag_berita}', [TagBeritaController::class, 'destroy'])->name('tag_berita.destroy');
 
-    // Tag Berita
     //berita
-    Route::get('/berita',[BeritaController::class,'index']);
-    Route::post('/berita',[BeritaController::class,'store']);
-    Route::get('/berita/tambah',[BeritaController::class,'create']);
-    Route::get('/berita/{id}/edit',[BeritaController::class,'edit']);
-    Route::put('/berita/{id}/update',[BeritaController::class,'update']);
-    Route::delete('/berita/{id}/hapus',[BeritaController::class,'destroy']);
+    Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
+    Route::get('/berita/tambah', [BeritaController::class, 'create'])->name('berita.create');
+    Route::post('/berita', [BeritaController::class, 'store'])->name('berita.store');
+    Route::get('/berita/{berita}/edit', [BeritaController::class, 'edit'])->name('berita.edit');
+    Route::put('/berita/{berita}', [BeritaController::class, 'update'])->name('berita.update');
+    Route::delete('/berita/{berita}', [BeritaController::class, 'destroy'])->name('berita.destroy');
 
     //kategori berita
-    Route::get('/kategori_berita',[KategoriBeritaController::class,'index'])->name('kategori_berita');
-    Route::post('/kategori_berita',[KategoriBeritaController::class,'store']);
-    Route::get('/kategori_berita/tambah',[KategoriBeritaController::class,'create']);
-    Route::get('/kategori_berita/{id}/edit',[KategoriBeritaController::class,'edit']);
-    Route::put('/kategori_berita/{id}/update',[KategoriBeritaController::class,'update']);
-    Route::delete('/kategori_berita/{id}/hapus',[KategoriBeritaController::class,'destroy']);
+    Route::get('/kategori_berita',[KategoriBeritaController::class,'index'])->name('kategori_berita.index');
+    Route::get('/kategori_berita/tambah',[KategoriBeritaController::class,'create'])->name('kategori_berita.create');
+    Route::post('/kategori_berita',[KategoriBeritaController::class,'store'])->name('kategori_berita.store');
+    Route::get('/kategori_berita/{kategori_berita}/edit',[KategoriBeritaController::class,'edit'])->name('kategori_berita.edit');
+    Route::put('/kategori_berita/{kategori_berita}',[KategoriBeritaController::class,'update'])->name('kategori_berita.update');
+    Route::delete('/kategori_berita/{kategori_berita}',[KategoriBeritaController::class,'destroy'])->name('kategori_berita.destroy');
 });

@@ -23,8 +23,8 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{$kb->nama}}</td>
                     <td>
-                        <form action="/admin/kategori_berita/{{$kb->id}}/hapus" method="POST">
-                        <a class="btn btn-primary" href="/admin/kategori_berita/{{$kb->id}}/edit">Edit</a>
+                        <form action="{{ route('kategori_berita.destroy', $kb->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('kategori_berita.edit', $kb->id) }}">Edit</a>
 
                         @csrf
                         @method('DELETE')
