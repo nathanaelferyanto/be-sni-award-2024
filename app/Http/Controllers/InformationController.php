@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class InformationController extends Controller
 {
     public function index() {
-        return view('information.index');
+        return view('user.information.index');
     }
 }

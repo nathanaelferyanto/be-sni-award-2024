@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{{ asset('assets') }}/css/styles.css" />
 
     <!-- Josefin Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,13 +37,13 @@
   </head>
   <body>
     <section id="login">
-      <div
-        class="login-container row align-items-center justify-content-center"
-      >
-        <div class="content-kiri col-lg-7">
+      <div class="login-container">
+
+        <div class="content-kiri">
           <img src="{{ asset('assets') }}/images/icon/Frame.svg" alt="" />
         </div>
-        <div class="content-kanan col-lg-5 py-5">
+
+        <div class="content-kanan py-5">
           <img src="{{ asset('assets') }}/images/icon/User_circle.svg" alt="" />
           <h1>SNI AWARD</h1>
           <form>
@@ -74,6 +75,7 @@
             </div>
           </form>
         </div>
+
       </div>
     </section>
   </body>
