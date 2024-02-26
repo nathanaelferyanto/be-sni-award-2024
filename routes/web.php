@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeControllerPeserta;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\KategoriBeritaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Peserta\AuthPesertaController;
+use App\Http\Controllers\Peserta\PesertaDashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,17 +23,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-// Route::get('/login', [LoginController::class, 'index']);
-Route::get('/informasi', [InformationController::class, 'index']);
-Route::get('/peserta', [HomeControllerPeserta::class, 'index']);
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', [HomeController::class, 'index']);
+    // Route::get('/login', [LoginController::class, 'index']);
+    Route::get('/informasi', [InformationController::class, 'index']);
+    Route::get('/peserta', [HomeControllerPeserta::class, 'index']);
 
-// 
-Auth::routes(['verify'=>true]);
-//
+    // Auth
+    //peserta
+    Route::get('/masuk', [AuthPesertaController::class, 'loginPesertaView']);
+    Route::post('/masuk', [AuthPesertaController::class, 'loginPeserta']);
+    Route::get('/registrasi', [AuthPesertaController::class, 'registrasiPesertaView']);
+    Route::post('/registrasi', [AuthPesertaController::class, 'registrasiPeserta']);
+    Route::get('/verifikasi/{verify_key}', [AuthPesertaController::class, 'verifikasiPeserta']);
+    //end Auth
+});
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    //Auth
+    Route::post('/keluar', [AuthPesertaController::class, 'logoutPeserta']);
+    //end Auth
 
+});
+
+Route::get('/dashboard', [PesertaDashboardController::class, 'index']);
 //berita
 Route::get('/berita',[BeritaController::class,'index']);
 Route::post('/berita',[BeritaController::class,'store']);

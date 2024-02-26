@@ -19,8 +19,10 @@ return new class extends Migration
             $table->tinyInteger('role')->unsigned();
             $table->enum('status',['aktif','tidak_aktif']);
             $table->string('password');
+            $table->string('verify_key');
             $table->rememberToken();
             $table->timestamps();
+            
             $table->foreign('role')->references('id')->on('role');
         });
     }

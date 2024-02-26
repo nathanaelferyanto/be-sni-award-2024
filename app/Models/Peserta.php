@@ -1,22 +1,24 @@
 <?php
 
-namespace App\Models\peserta;
+namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Peserta extends Authenticatable implements MustVerifyEmail
+class Peserta extends Authenticatable
 {
     use HasFactory, HasApiTokens, Notifiable;
     protected $table = 'Peserta';
     protected $fillable = [
         'nama',
         'email',
-        'password'
+        'password',
+        'kategori_organisasi_id',
+        'verify_key'
     ];
     protected $hidden = [
         'password',

@@ -48,7 +48,7 @@
           <h1>SNI AWARD</h1>
 
 {{-- ==================================================================== --}}
-          <form method="POST" action="{{ route('login') }}">
+          <form method="POST" action="/masuk">
             @csrf
             <div class="mb-3">
                 <label for="email" class="form-label">{{ __('Email Address') }}</label>
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="form-text text-center">
-                    Belum memiliki akun? <a href="/register">Daftar </a>
+                    Belum memiliki akun? <a href="/registrasi">Daftar </a>
                 </div>
             </div>
         </form>

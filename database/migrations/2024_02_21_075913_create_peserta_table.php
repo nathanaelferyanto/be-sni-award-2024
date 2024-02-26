@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('status', ['aktif', 'tidak aktif']);
+            $table->string('verify_key');
+            $table->enum('status', ['aktif', 'tidak aktif'])->default('aktif');
             $table->tinyInteger('kategori_organisasi_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
