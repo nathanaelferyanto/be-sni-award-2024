@@ -577,6 +577,43 @@ ul a {
     color: #fff;
 }
 
+/* register */
+#register{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/icon/Vector\ 7.svg");
+    background-repeat: no-repeat;
+    /* background-size: 75%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#register .content-kiri{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#register .content-kanan{
+    width: 40%;
+    height: 100%;
+    background-color: #552525;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#register .content-kanan > h1{
+    color: #fff;
+}
+#register .content-kanan > form > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* end register */
+
 /* Login Page */
 #login {
     width: 100dvw;
@@ -645,7 +682,7 @@ ul a {
     padding: 0 30px;
 }
 
-.login-container .content-kanan form input {
+.login-container .content-kanan form .form-control {
     border-radius: 37px;
     width: 100%;
     height: 40px;

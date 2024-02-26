@@ -10,6 +10,11 @@ class KategoriBeritaController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+
     public function index()
     {
         $kategori_berita = KategoriBerita::all();
