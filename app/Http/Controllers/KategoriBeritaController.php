@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class KategoriBeritaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+    
     public function index()
     {
         $kategori_berita = KategoriBerita::all();

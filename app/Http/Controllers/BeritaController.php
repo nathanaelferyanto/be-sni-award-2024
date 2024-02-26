@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\DB;
 
 class BeritaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+
     public function index()
     {
         $berita = Berita::all();
