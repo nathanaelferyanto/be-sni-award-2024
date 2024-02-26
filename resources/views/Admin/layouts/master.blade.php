@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peserta || SNI Award 2023</title>
+    <title>Admin || SNI Award 2023</title>
 
     <!-- Bootstrap -->
     <link
@@ -12,11 +12,6 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-
-    <!-- Bootstrap Datepicker CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-
-
 
     <!-- Arimo Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,11 +41,8 @@
     />
     <script src="https://unpkg.com/feather-icons"></script>
 
-    
-    <link rel="stylesheet" href="{{ asset('assets') }}/peserta/css/rome.css" />
-
-    <!-- CSS Peserta -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/peserta/css/styles.css" />
+    <!-- CSS Admin -->
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/css/styles.css" />
 </head>
 
 <body style="background-color: #ECE4E4;">
@@ -69,11 +61,12 @@
         <a
           class="navbar-brand m-0"
           id="navbarBrand"
-          href="/peserta"
+          href="#"
+        
         >
           <img
             src="{{ asset('assets') }}/images/icon/logo-sniaward.svg"
-            class="navbar-brand-img" style="width: 100%; max-width: 100px; height: auto;"
+            class="navbar-brand-img" style="width: 100px;"
             id="navbarBrandImg"
             alt="SNIAward 2024"
           />
@@ -83,7 +76,7 @@
       <div class="sidebar collapse navbar-collapse w-auto" id="sidebar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('peserta') ? 'active' : '' }}" id="navLink" href="/peserta">
+            <a class="nav-link active" id="navLink" href="../pages/dashboard.html">
               <div
                 class="icon-sm icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
@@ -93,23 +86,108 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('peserta/riwayat') ? 'active' : '' }}" id="navLink" href="/peserta/riwayat">
+            <a class="nav-link" id="navLink" href="#">
+              <div
+                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa fa-university"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Halaman Depan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navLink" href="#">
+              <div
+                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa fa-user"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Peserta</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navLink" href="#">
+              <div
+                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa fa-tasks"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Evaluator</span>
+            </a>
+          </li>
+          <li class="nav-item" id="navItemBerita">
+            <a class="nav-link" id="navLink" href="#">
+              <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                <i class="fa fa-sticky-note"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Berita & Acara</span> 
+                <i class="fa fa-caret-left ms-auto" id="faCaretLeft"></i>
+            </a>
+            <ul class="dropdown-menu" id="dropdownMenu">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Kategori</span> 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Tag Berita</span> 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Dan lain-lain</span> 
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navLink" href="#">
+              <div
+                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa fa-tags"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Dokumentasi</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
                 <i class="fa fa-file-text"></i>
               </div>
-              <span class="nav-link-text" id="navLinkText">Riwayat</span>
+              <span class="nav-link-text" id="navLinkText">Dokumen</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('peserta/pendaftaran') ? 'active' : '' }}" id="navLink" href="/peserta/pendaftaran">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
                 <i class="fa fa-calendar"></i>
               </div>
-              <span class="nav-link-text" id="navLinkText">Pendaftaran</span>
+              <span class="nav-link-text" id="navLinkText">Penjadwalan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navLink" href="#">
+              <div
+                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa fa-database"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Data Master</span>
             </a>
           </li>
           <!-- <li class="nav-item">
@@ -384,14 +462,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown d-flex px-2 gap-1 align-items-center">
-                <a
-                  href="/peserta/profil"
-                  class="nav-link text-body p-0"
-                >
-                  <i class="fa fa-user-o me-sm-1"></i>
-                  <span class="d-sm-inline d-none me-sm-1 p-0"><b>Peserta</b></span>
-                </a>
+              <li class="nav-item dropdown d-flex px-2 align-items-center">
                 <a
                   href="javascript:;"
                   class="nav-link text-body p-0"
@@ -399,6 +470,8 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
+                  <i class="fa fa-user-o me-sm-1"></i>
+                  <span class="d-sm-inline d-none me-sm-1"><b>Admin</b></span>
                   <i class="fa fa-caret-down"></i>
                 </a>
                 <ul
@@ -410,14 +483,24 @@
                       class="dropdown-item border-radius-md"
                       href="javascript:;"
                     >
-                      <div class="d-flex justify-content-center">
-                        <i class="fa fa-user"></i>
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span>
-                          from Laursdsafa
-                        </h6>
+                      <div class="d-flex py-1">
+                        <div class="my-auto">
+                          <img
+                            src="../assets/img/team-2.jpg"
+                            class="avatar avatar-sm me-3"
+                          />
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="text-sm font-weight-normal mb-1">
+                            <span class="font-weight-bold">New message</span>
+                            from Laur
+                          </h6>
+                          <p class="text-xs text-secondary mb-0">
+                            <i class="fa fa-clock me-1"></i>
+                            13 minutes ago
+                          </p>
+                        </div>
                       </div>
-                      
                     </a>
                   </li>
                   <li class="mb-2">
@@ -425,12 +508,23 @@
                       class="dropdown-item border-radius-md"
                       href="javascript:;"
                     >
-                      <div class="d-flex justify-content-center">
-                        <i class="fa fa-user"></i>
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span>
-                          from Laursdsafa
-                        </h6>
+                      <div class="d-flex py-1">
+                        <div class="my-auto">
+                          <img
+                            src="../assets/img/small-logos/logo-spotify.svg"
+                            class="avatar avatar-sm bg-gradient-dark me-3"
+                          />
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="text-sm font-weight-normal mb-1">
+                            <span class="font-weight-bold">New album</span> by
+                            Travis Scott
+                          </h6>
+                          <p class="text-xs text-secondary mb-0">
+                            <i class="fa fa-clock me-1"></i>
+                            1 day
+                          </p>
+                        </div>
                       </div>
                     </a>
                   </li>
@@ -504,7 +598,7 @@
       </nav>
       <!-- End Navbar -->
 
-      <div class="py-4 me-4">
+      <div class="container-fluid py-4">
         <!-- Content -->
         @yield('content')
         <!-- End Content -->
@@ -573,7 +667,6 @@
       </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -585,14 +678,8 @@
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
       crossorigin="anonymous"
     ></script>
-    
-    <!-- Bootstrap Datepicker Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js" integrity="sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('assets') }}/admin/js/script.js"></script>
 
-    <script src="{{ asset('assets') }}/peserta/js/rome.js"></script>
-
-    <!-- My JavaScript -->
-    <script src="{{ asset('assets') }}/peserta/js/script.js"></script>
 </body>
 
 </html>

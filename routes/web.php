@@ -1,12 +1,16 @@
 <?php
 
+use App\Http\Controllers\HomeAdminController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeControllerPeserta;
+use App\Http\Controllers\HomePesertaController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\KategoriBeritaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfilPesertaController;
+use App\Http\Controllers\RiwayatPesertaController;
 use App\Http\Controllers\TagBeritaController;
 use App\Models\KategoriBerita;
 use App\Models\TagBerita;
@@ -30,7 +34,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/informasi', [InformationController::class, 'index']);
-Route::get('/peserta', [HomeControllerPeserta::class, 'index']);
+Route::get('/admin', [HomeAdminController::class, 'index']);
+Route::get('/peserta',[HomePesertaController::class, 'index']);
+Route::get('/peserta/profil',[ProfilPesertaController::class, 'index']);
+Route::get('/peserta/riwayat', [RiwayatPesertaController::class, 'index']);
 
 Route::prefix('admin')->group(function() {
 
