@@ -33,7 +33,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('assets') }}/css/styles.css" />
   </head>
   <body>
     <section id="login">

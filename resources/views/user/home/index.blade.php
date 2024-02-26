@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('user.layouts.master')
 
 @section('content')
 <main>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    
+
   </article>
 
   <article id="about">
@@ -242,7 +242,7 @@
           <h3>SNI Award 2023, untuk Kinerja Unggul dan efisien</h3>
           <p>BSN akan mengadakan Seminar Nasional dalam rangka Peringatan Hari Standar Dunia dan Bulan Mutu Nasional (BMN) 2021. Seminar akan dilaksanakan pada bulan November 2021 .</p>
           <button class="btn float-end">Baca Selengkapnya</button>
-        </div>          
+        </div>
       </div>
 
       <div class="content-bawah row">
@@ -277,7 +277,7 @@
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                Dari mana anda memperoleh informasi tentang SNI Award 
+                Dari mana anda memperoleh informasi tentang SNI Award
                 </button>
               </h2>
               <div
