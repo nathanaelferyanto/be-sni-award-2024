@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('assessment_sub_kategori', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->tinyInteger('assessment_kategori_id')->unsigned();
-            $table->foreign('assessment_kategori_id')->references('id')->on('assessment_kategori');
+            $table->foreign('assessment_kategori_id')->references('id')->on('assessment_kategori')->onDelete('cascade');
             $table->string('nama');
             $table->timestamps();
         });

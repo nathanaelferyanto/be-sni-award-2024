@@ -81,3 +81,52 @@ barsMenu.addEventListener("click", function (event) {
     sidenavVisible = !sidenavVisible; // Toggle status tampilan sidenav
     event.preventDefault();
 });
+
+// modal pop up ubah
+function openModalUbah(id, name) {
+    document.getElementById('id_kategori').value = id;
+    document.getElementById('nama_kategori').value = name;
+
+    document.getElementById('form_ubah_kategori').setAttribute('action', `/assessment_kategori/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('ubahKategori'));
+    // const modal = new bootstrap.Modal(document.getElementById('ubahStatusKepemilikan'));
+    modal.show();
+}
+
+// modal pop up hapus
+function openModalHapus(id, name) {
+    document.getElementById('id_kategori').value = id;
+    document.getElementById('nama_kategori').value = name;
+
+    // const formModalContent = document.getElementById('formModalContent');
+    // formModalContent.action = '/assessment/' + id;
+    document.getElementById('form_hapus_kategori').setAttribute('action', `/assessment_kategori/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('hapusKategori'));
+    modal.show();
+}
+
+// modal pop up ubah status kepemilikan
+function openModalUbahSK(id, name) {
+    document.getElementById('id_status_kepemilikan').value = id;
+    document.getElementById('nama_status_kepemilikan').value = name;
+
+    document.getElementById('form_ubah_status_kepemilikan').setAttribute('action', `/admin/status_kepemilikan/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('ubahStatusKepemilikan'));
+    modal.show();
+}
+
+// modal pop up hapus status kepemilikan
+function openModalHapusSK(id, name) {
+    document.getElementById('id_status_kepemilikan').value = id;
+    document.getElementById('nama_status_kepemilikan').value = name;
+
+    // const formModalContent = document.getElementById('formModalContent');
+    // formModalContent.action = '/assessment/' + id;
+    document.getElementById('form_hapus_status_kepemilikan').setAttribute('action', `/admin/status_kepemilikan/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('hapusStatusKepemilikan'));
+    modal.show();
+}

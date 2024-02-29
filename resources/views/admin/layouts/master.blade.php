@@ -39,7 +39,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- CSS Admin -->
@@ -50,7 +49,7 @@
 
 <aside
       class="sidenav navbar navbar-vertical navbar-expand-xs fixed-start"
-      id="sidenav-main"
+      id="sidenavMain"
       style="
         background-color: #fafafa;
         border-top-right-radius: 50px;
@@ -58,123 +57,171 @@
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
       "
     >
-      <div class="sidenav-header">
-        <i
-          class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
-          aria-hidden="true"
-          id="iconSidenav"
-        ></i>
+      <div class="sidenav-header d-flex align-item-center justify-content-center">
         <a
           class="navbar-brand m-0"
-          href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html "
-          target="_blank"
+          id="navbarBrand"
+          href="#"
+        
         >
           <img
-            src="{{ asset('assets') }}/images/icon/logo-sniaward-kecil.svg"
-            class="navbar-brand-img h-100"
+            src="{{ asset('assets') }}/images/icon/logo-sniaward.svg"
+            class="navbar-brand-img" style="width: 100px;"
+            id="navbarBrandImg"
             alt="SNIAward 2024"
           />
-          <span class="ms-1" style="color: #2B2B28; font-weight: bold;">SNI AWARD</span>
         </a>
       </div>
-      <hr class="horizontal dark mt-0" />
-      <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
+      <!-- <hr class="horizontal dark mt-0" /> -->
+      <div class="sidebar collapse navbar-collapse w-auto" id="sidebar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="../pages/dashboard.html">
+            <a class="nav-link active" id="navLink" href="../pages/dashboard.html">
               <div
                 class="icon-sm icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
                 <i class="fa fa-home"></i>
               </div>
-              <span class="nav-link-text">Beranda</span>
+              <span class="nav-link-text" id="navLinkText">Beranda</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa fa-university"></i>
               </div>
-              <span class="nav-link-text">Halaman Depan</span>
+              <span class="nav-link-text" id="navLinkText">Halaman Depan</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/admin/berita">
-                <div
-                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
-              >
-                <i class="fa fa-file-text-o"></i>
+          <li class="nav-item" id="navItemBerita">
+            <a class="nav-link" id="navLink" href="#">
+              <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                <i class="fa fa-sticky-note"></i>
               </div>
-              <span class="nav-link-text">Berita</span>
+              <span class="nav-link-text" id="navLinkText">Data Master</span> 
+                <i class="fa fa-caret-left ms-auto" id="faCaretLeft"></i>
             </a>
+            <ul class="dropdown-menu" id="dropdownMenu">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Konfigurasi</span> 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Assesment</span> 
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/admin/kategori_berita">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa fa-user"></i>
               </div>
-              <span class="nav-link-text">Kategori Berita</span>
+              <span class="nav-link-text" id="navLinkText">Peserta</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa fa-tasks"></i>
               </div>
-              <span class="nav-link-text">Berita & Acara</span>
+              <span class="nav-link-text" id="navLinkText">Evaluator</span>
+            </a>
+          </li>
+          <li class="nav-item" id="navItemBerita">
+            <a class="nav-link" id="navLink" href="#">
+              <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                <i class="fa fa-sticky-note"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Berita & Acara</span> 
+                <i class="fa fa-caret-left ms-auto" id="faCaretLeft"></i>
+            </a>
+            <ul class="dropdown-menu" id="dropdownMenu">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Kategori</span> 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Tag Berita</span> 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <div class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center">
+                    <i class="fa fa-circle-thin"></i>
+                  </div>
+                  <span class="nav-link-text dropdown">Dan lain-lain</span> 
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navLink" href="#">
+              <div
+                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa fa-tags"></i>
+              </div>
+              <span class="nav-link-text" id="navLinkText">Dokumentasi</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa fa-file-text"></i>
               </div>
-              <span class="nav-link-text">Dokumentasi</span>
+              <span class="nav-link-text" id="navLinkText">Dokumen</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa fa-calendar"></i>
               </div>
-              <span class="nav-link-text">Dokumen</span>
+              <span class="nav-link-text" id="navLinkText">Penjadwalan</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" id="navLink" href="#">
               <div
                 class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
               >
-                <i class="fa fa-file-text-o"></i>
+                <i class="fa fa-database"></i>
               </div>
-              <span class="nav-link-text">Penjadwalan</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <div
-                class="icon-shape icon-sm text-center me-1 d-flex align-items-center justify-content-center"
-              >
-                <i class="fa fa-file-text-o"></i>
-              </div>
-              <span class="nav-link-text">Data Master</span>
+              <span class="nav-link-text" id="navLinkText">Data Master</span>
             </a>
           </li>
         </ul>
       </div>
     </aside>
     <main
-      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps-3"
+      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps-3" id="mainContent"
     >
       <!-- Navbar -->
       <nav
@@ -189,7 +236,7 @@
       >
         <div class="container-fluid py-1 px-3">
           <nav aria-label="breadcrumb" class="d-flex ps-2 align-items-center gap-3">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" id="barsMenu" style="cursor: pointer;"></i>
             <h6 class="mb-0" style="font-size: 24px; font-weight: bold;">Beranda</h6>
             <li class="nav-item px-2 d-flex align-items-center">
               <a
@@ -209,19 +256,7 @@
             class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
             id="navbar"
           >
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-              <div class="input-group">
-                <span class="input-group-text text-body"
-                  ><i class="fa fa-search" aria-hidden="true"></i
-                ></span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Type here..."
-                />
-              </div>
-            </div>
-            <ul class="navbar-nav justify-content-end">
+            <ul class="navbar-nav d-flex ms-auto justify-content-end">
               <li class="nav-item dropdown px-2 d-flex align-items-center">
                 <a
                   href="javascript:;"
@@ -358,9 +393,9 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <i class="fa fa-user-o me-sm-1"></i>
-                <span class="d-sm-inline d-none me-sm-1"><b>Admin</b></span>
-                <i class="fa fa-caret-down"></i>
+                  <i class="fa fa-user-o me-sm-1"></i>
+                  <span class="d-sm-inline d-none me-sm-1"><b>Admin</b></span>
+                  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul
                   class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4"
@@ -496,13 +531,13 @@
             <div class="d-flex align-items-center justify-content-center">
               <div class="mb-lg-0 mb-4">
                 <div
-                class="copyright text-center text-sm text-muted text-lg-start"
+                  class="copyright text-center text-sm text-muted text-lg-start"
                 >
-                ©
-                <script>
-                document.write(new Date().getFullYear());
-                </script>
-                , made with <i class="fa fa-heart"></i> by
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , made with <i class="fa fa-heart"></i> by
                   <a
                     href="https://www.creative-tim.com"
                     class="font-weight-bold"
@@ -516,6 +551,19 @@
         </footer>
       </div>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{ asset('assets') }}/admin/js/script.js"></script>
 
 </body>
 
