@@ -13,6 +13,14 @@ class AssessmentSubKategoriController extends Controller
     {
         // $assessment_sub_kategori = AssessmentSubKategori::all();
         // return view('admin.assessment.assessment_kategori.index',compact(['assessment_sub_kategori']));
+        $assessment_kategori = AssessmentKategori::get();
+        $assessment_sub_kategori = AssessmentSubKategori::get();
+        // dd($assessment_sub_kategori);
+        return view('admin.assessment.assessment_kategori.index',[
+            'assessment_kategori' => $assessment_kategori,
+            'list_assessment_kategori' => $assessment_kategori,
+            'assessment_sub_kategori' => $assessment_sub_kategori,
+        ]);
     }
 
     public function create()
@@ -55,6 +63,6 @@ class AssessmentSubKategoriController extends Controller
     public function destroy($id){
         $assessment_sub_kategori = AssessmentSubKategori::find($id);
         $assessment_sub_kategori->delete();
-        return redirect('/assessment_sub_kategori')->with('success','Sub Kategori berhasil dihapus');
+        return redirect('/assessment_kategori')->with('success','Sub Kategori berhasil dihapus');
     }
 }

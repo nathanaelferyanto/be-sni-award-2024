@@ -29,7 +29,8 @@
         </div>
       </div>
       <div class="modal-footer gap-2" style="border: none;">
-        <button class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+        <div class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Batal</div>
+        {{-- <div class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Batal</div> --}}
         <button type="submit" class="btn" data-bs-toggle="modal" >Simpan</button>
       </div>
     </form>
@@ -48,10 +49,10 @@
         <div class="d-flex flex-column gap-2 pb-0 mb-0">
           <div class="d-flex flex-column gap-2 mb-3">
             <h6 class="ms-1 mb-0">Kategori</h6>
-            <select class="form-select form-control-lg ps-4" aria-label="Default select example" name="assessment_kategori_id">
+            <select class="form-select form-control-lg ps-4" aria-label="Default select example" name="assessment_kategori_id" id="select_ass_kategori">
               <option hidden>Pilih Kategori</option>
               @foreach ($assessment_kategori as $data)
-                  <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                  <option value="{{ $data->id }}" name="opt-kategori[{{$data->id}}]">{{ $data->nama }}</option>
               @endforeach
 
               {{-- <option value="1">Kepemimpinan</option>
@@ -67,7 +68,7 @@
         </div>
       </div>
       <div class="modal-footer gap-2" style="border: none;">
-        <button class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+        <div class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Batal</div>
         <button class="btn" data-bs-toggle="modal" type="submit" >Simpan</button>
       </div>
     </form>
@@ -167,10 +168,32 @@
 </div>
 {{-- end delete --}}
 
-{{-- Pop up sub kategori --}}
-<div class="modal fade" id="tambahSubKategori" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+{{-- delete ask --}}
+<div class="modal fade" id="hapusAssessmentSubKategori" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
-    <form action="/assessment_sub_kategori" method="POST" class="modal-content">
+    <form class="modal-content" id="form_hapus_assessment_sub_kategori" method="POST" >
+      @method('DELETE')
+      @csrf
+      <div class="modal-header" style="border: none;">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Peringatan!</h1>
+      </div>
+      <div class="modal-body" style="border: none;">
+        <p>Apakah Anda yakin menghapus item ini?</p>
+      </div>
+      <div class="modal-footer gap-2" style="border: none;">
+        <div class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Tidak</div>
+        <button type="submit" class="btn" data-bs-toggle="modal">Ya</button>
+      </div>
+    </form>
+  </div>
+</div>
+{{-- end delete --}}
+
+{{-- Pop up ubah sub kategori --}}
+<div class="modal fade" id="ubahAssessmentSubKategori" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <form id="form_ubah_assessment_sub_kategori" method="POST" class="modal-content">
+      @method('PUT')
           @csrf
       <div class="modal-header" style="border: none;">
         <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Ubah Sub Kategori</h1>
@@ -180,20 +203,18 @@
           <div class="d-flex flex-column gap-2 mb-3">
             <h6 class="ms-1 mb-0">Kategori</h6>
             <select class="form-select form-control-lg ps-4" aria-label="Default select example" name="assessment_kategori_id">
-              <option hidden>Pilih Kategori</option>
+              @foreach ($assessment_kategori as $data)
+                <option value="{{$data->id}}"> {{ $data->nama }} </option>
+              @endforeach
+              
               @foreach ($assessment_kategori as $data)
                   <option value="{{ $data->id }}">{{ $data->nama }}</option>
               @endforeach
-
-              {{-- <option value="1">Kepemimpinan</option>
-              <option value="2">Strategi</option>
-              <option value="3">Pelanggan</option>
-              <option value="4">dan lain-lain..</option> --}}
             </select>
           </div>
           <div class="d-flex flex-column gap-2">
             <h6 class="ms-1 mb-0">Sub Kategori</h6>
-            <input type="text" name="nama" class="form-control form-control-lg ps-4" placeholder="Tuliskan Sub Kategori" style="font-size: 100%;"/>
+            <input type="text" id="nama_assessment_sub_kategori" name="nama" class="form-control form-control-lg ps-4" placeholder="Tuliskan Sub Kategori" style="font-size: 100%;"/>
           </div>
         </div>
       </div>
@@ -269,7 +290,6 @@
       z-index: 1;
       border-radius: 20px;
     ">
-      lkmclkmcxkm
       <form action="/assessment_kategori/{{$ak->id}}" method="POST" style="
       displa: flex;
       align-items: center;
@@ -310,7 +330,7 @@
         </div>
     </div>
   </div>
-    
+
   <!-- Sub Kategori Section -->
 <div class="tab-pane" id="assessment_sub_kategori_form" role="tabpanel" aria-labelledby="assessment_sub_kategori_form">
   <div class="content-profil py-5">
@@ -330,10 +350,28 @@
           </thead>
           <tbody>
             @foreach ($assessment_sub_kategori as $ask)
-    <tr>
+            <div class="modal fade" id="hapusAssessmentSubKategori" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="1" style="">
+              <div class="modal-dialog modal-dialog-centered">
+                <form class="modal-content" method="POST" action="/assessment_sub_kategori/{{$ask->id}}">
+                  @method('DELETE')
+                  @csrf
+                  <div class="modal-header" style="border: none;">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Peringatan!</h1>
+                  </div>
+                  <div class="modal-body" style="border: none;">
+                    <p>Apakah Anda yakin menghapus item ini?</p>
+                  </div>
+                  <div class="modal-footer gap-2" style="border: none;">
+                    <button class="btn nonactive"  data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close">Tidak</button>
+                    <button type="submit" class="btn" data-bs-toggle="modal">Ya</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+      <tr>
         <td>{{$loop->iteration}}</td>
-        <td>{{$ask->nama}}</td>
         <td>{{$ask->assessment_kategori->nama}}</td>
+        <td>{{$ask->nama}}</td>
         <td>
           <div class="d-flex justify-content-center gap-2">
             {{-- <a href="/assessment_kategori/{{$ask ->id}}/ubah">
@@ -341,19 +379,17 @@
                 Ubah
               </button>
             </a> --}}
-            <a href="#ubahSubKategori" class="btn btn-ubah" data-bs-toggle="modal" role="button">
-              Ubah
-            </a>
-            <form action="/assessment_kategori/{{$ask->id}}" method="POST">
-              @method("DELETE")
-              @csrf
-              <button type="submit" class="btn btn-hapus">
-                 Hapus</button>
-            </form>
+            <button onclick="openModalUbahASK('{{ $ask->id }}', ' {{ $ask->nama }} ')" class="btn btn-ubah" data-bs-toggle="modal" role="button">Ubah</button>
+            <button onclick="openModalHapusASK('{{ $ask->id }}', ' {{ $ask->nama }} ')" class="btn btn-hapus">Hapus</button>
           </div>
         </td>
     </tr>
     @endforeach
+
+    <div id="hidden-data" style="display: none">
+      <input type="hidden" id="id_assessment_sub_kategori">
+      <input type="hidden" id="nama_assessment_sub_kategori">
+    </div>
             {{-- <tr>
               <th scope="row">1</th>
               <td>Kepemimpinan</td>

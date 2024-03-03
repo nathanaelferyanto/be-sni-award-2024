@@ -109,6 +109,7 @@ function openModalHapus(id, name) {
 
 // modal pop up ubah status kepemilikan
 function openModalUbahSK(id, name) {
+    
     document.getElementById('id_status_kepemilikan').value = id;
     document.getElementById('nama_status_kepemilikan').value = name;
 
@@ -128,5 +129,31 @@ function openModalHapusSK(id, name) {
     document.getElementById('form_hapus_status_kepemilikan').setAttribute('action', `/admin/status_kepemilikan/${id}`);
 
     const modal = new bootstrap.Modal(document.getElementById('hapusStatusKepemilikan'));
+    modal.show();
+}
+
+// modal pop up ubah assessment subkategori
+function openModalUbahASK(id, name) {
+    document.getElementById('id_assessment_sub_kategori').value = id;
+    document.getElementById('nama_assessment_sub_kategori').value = name;
+    
+    document.getElementById('form_ubah_assessment_sub_kategori').setAttribute('action', `/assessment_sub_kategori/${id}`);
+    const x = $(`opt-kategori[${id}]`).prop('selected',true);
+    console.log(x);
+
+
+    const modal = new bootstrap.Modal(document.getElementById('ubahAssessmentSubKategori'));
+    modal.show();
+}
+
+// modal pop up hapus assessment subkategori
+function openModalHapusASK(id, name) {
+    document.getElementById('id_assessment_sub_kategori').value = id;
+    document.getElementById('nama_assessment_sub_kategori').value = name;
+    
+
+    document.getElementById('form_hapus_assessment_sub_kategori').setAttribute('action', `/assessment_sub_kategori/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('hapusAssessmentSubKategori'));
     modal.show();
 }

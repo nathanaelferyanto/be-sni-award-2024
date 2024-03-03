@@ -16,6 +16,8 @@ class AssessmentKategori extends Model
         'nama',
     ];
 
+    protected $guarded = [];
+
     public function assessment_sub_kategori(): HasMany
     {
         return $this->hasMany(AssessmentSubKategori::class);

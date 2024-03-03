@@ -21,10 +21,10 @@ class AssessmentKategoriController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        return view('admin.assessment.assessment_kategori.create');
-    }
+    // public function create()
+    // {
+    //     return view('admin.assessment.assessment_kategori.create');
+    // }
 
     public function store(Request $request)
     {
