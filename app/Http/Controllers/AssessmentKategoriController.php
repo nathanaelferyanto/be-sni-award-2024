@@ -28,11 +28,14 @@ class AssessmentKategoriController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nama' => 'required|max:50',
+        ]);
         AssessmentKategori::create([
             'nama' => $request->nama,
         ]);
 
-        return redirect('/assessment_kategori');
+        return redirect('/assessment_kategori')->with('success','Kategori berhasil ditambahkan');
     }
 
     public function edit($id)

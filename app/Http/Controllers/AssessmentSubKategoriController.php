@@ -31,6 +31,9 @@ class AssessmentSubKategoriController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nama' => 'required|max:50',
+        ]);
         AssessmentSubKategori::create([
             'assessment_kategori_id' => $request->assessment_kategori_id,
             'nama' => $request->nama,
@@ -40,7 +43,7 @@ class AssessmentSubKategoriController extends Controller
         // $sub_kategori->nama = $request->nama;
         // $sub_kategori->save();
 
-        return redirect()->route('ass_kategori.index');
+        return redirect()->route('ass_kategori.index')->with('success','Sub Kategori berhasil ditambah');
     }
 
     public function edit($id)
