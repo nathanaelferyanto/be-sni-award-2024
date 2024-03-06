@@ -46,15 +46,16 @@ class AssessmentSubKategoriController extends Controller
     public function update(Request $request, $id){
         $assessment_sub_kategori = AssessmentSubKategori::find($id);
         $assessment_sub_kategori->update([
+            'assessment_kategori_id' => $request->assessment_kategori_id,
             'nama' => $request->nama,
         ]);
 
-        return redirect('/assessment_sub_kategori')->with('success','Sub Kategori berhasil diubah');
+        return redirect('/admin/assessment_kategori')->with('success','Sub Kategori berhasil diubah');
     }
 
     public function destroy($id){
         $assessment_sub_kategori = AssessmentSubKategori::find($id);
         $assessment_sub_kategori->delete();
-        return redirect('/assessment_sub_kategori')->with('success','Sub Kategori berhasil dihapus');
+        return redirect()->route('ass_kategori.index')->with('success', 'Sub Kategori berhasil dihapus');
     }
 }

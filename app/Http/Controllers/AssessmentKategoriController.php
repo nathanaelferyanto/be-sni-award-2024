@@ -18,21 +18,25 @@ class AssessmentKategoriController extends Controller
             'assessment_kategori' => $assessment_kategori,
             'list_assessment_kategori' => $assessment_kategori,
             'assessment_sub_kategori' => $assessment_sub_kategori,
+            'list_assessment_sub_kategori' => $assessment_sub_kategori,
         ]);
     }
 
-    public function create()
-    {
-        return view('admin.assessment.assessment_kategori.create');
-    }
+    // public function create()
+    // {
+    //     return view('admin.assessment.assessment_kategori.create');
+    // }
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nama' => 'required|max:50',
+        ]);
         AssessmentKategori::create([
             'nama' => $request->nama,
         ]);
 
-        return redirect('/assessment_kategori');
+        return redirect('/admin/assessment_kategori')->with('success','Kategori berhasil ditambahkan');
     }
 
     public function edit($id)
@@ -49,13 +53,13 @@ class AssessmentKategoriController extends Controller
             'nama' => $request->nama,
         ]);
 
-        return redirect('/assessment_kategori')->with('success','Kategori berhasil diubah');
+        return redirect('/admin/assessment_kategori')->with('success','Kategori berhasil diubah');
     }
 
     public function destroy($id){
         // dd($id);
         $assessment_kategori = AssessmentKategori::find($id);
         $assessment_kategori->delete();
-        return redirect('/assessment_kategori')->with('success','Kategori berhasil dihapus');
+        return redirect('/admin/assessment_kategori')->with('success','Kategori berhasil dihapus');
     }
 }

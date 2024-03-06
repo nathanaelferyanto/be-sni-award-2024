@@ -114,20 +114,20 @@ Route::post('/kategori_berita',[KategoriBeritaController::class,'store']);
 Route::get('/kategori_berita/tambah',[KategoriBeritaController::class,'create']);
 
 // assessment kategori
-Route::get('/assessment_kategori', [App\Http\Controllers\AssessmentKategoriController::class,'index'])->name('ass_kategori.index');
-Route::get('/assessment_kategori/tambah', [App\Http\Controllers\AssessmentKategoriController::class,'create']);
-Route::post('/assessment_kategori',[App\Http\Controllers\AssessmentKategoriController::class,'store']);
-Route::get('/assessment_kategori/{id}/ubah',[App\Http\Controllers\AssessmentKategoriController::class,'edit']);
-Route::put('/assessment_kategori/{id}',[App\Http\Controllers\AssessmentKategoriController::class,'update']);
-Route::delete('/assessment_kategori/{id}',[App\Http\Controllers\AssessmentKategoriController::class,'destroy']);
+Route::get('/admin/assessment_kategori', [App\Http\Controllers\AssessmentKategoriController::class,'index'])->name('ass_kategori.index');
+Route::get('/admin/assessment_kategori/tambah', [App\Http\Controllers\AssessmentKategoriController::class,'create']);
+Route::post('/admin/assessment_kategori',[App\Http\Controllers\AssessmentKategoriController::class,'store']);
+Route::get('/admin/assessment_kategori/{id}/ubah',[App\Http\Controllers\AssessmentKategoriController::class,'edit']);
+Route::put('/admin/assessment_kategori/{id}',[App\Http\Controllers\AssessmentKategoriController::class,'update']);
+Route::delete('/admin/assessment_kategori/{id}',[App\Http\Controllers\AssessmentKategoriController::class,'destroy']);
 
 // assessment sub kategori
-Route::get('/assessment_sub_kategori', [App\Http\Controllers\AssessmentSubKategoriController::class,'index']);
-Route::get('/assessment_sub_kategori/tambah', [App\Http\Controllers\AssessmentSubKategoriController::class,'create']);
-Route::post('/assessment_sub_kategori',[App\Http\Controllers\AssessmentSubKategoriController::class,'store']);
-Route::get('/assessment_sub_kategori/{id}/ubah',[App\Http\Controllers\AssessmentSubKategoriController::class,'edit']);
-Route::put('/assessment_sub_kategori/{id}',[App\Http\Controllers\AssessmentSubKategoriController::class,'update']);
-Route::delete('/assessment_sub_kategori/{id}',[App\Http\Controllers\AssessmentSubKategoriController::class,'destroy']);
+Route::get('/admin/assessment_sub_kategori', [App\Http\Controllers\AssessmentSubKategoriController::class,'index']);
+Route::get('/admin/assessment_sub_kategori/tambah', [App\Http\Controllers\AssessmentSubKategoriController::class,'create']);
+Route::post('/admin/assessment_sub_kategori',[App\Http\Controllers\AssessmentSubKategoriController::class,'store']);
+Route::get('/admin/assessment_sub_kategori/{id}/ubah',[App\Http\Controllers\AssessmentSubKategoriController::class,'edit']);
+Route::put('/admin/assessment_sub_kategori/{id}',[App\Http\Controllers\AssessmentSubKategoriController::class,'update']);
+Route::delete('/admin/assessment_sub_kategori/{id}',[App\Http\Controllers\AssessmentSubKategoriController::class,'destroy']);
 
 // status kepemilikan
 Route::get('/admin/status_kepemilikan', [App\Http\Controllers\StatusKepemilikanController::class,'index']);

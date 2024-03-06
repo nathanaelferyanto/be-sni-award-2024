@@ -87,7 +87,7 @@ function openModalUbah(id, name) {
     document.getElementById('id_kategori').value = id;
     document.getElementById('nama_kategori').value = name;
 
-    document.getElementById('form_ubah_kategori').setAttribute('action', `/assessment_kategori/${id}`);
+    document.getElementById('form_ubah_kategori').setAttribute('action', `/admin/assessment_kategori/${id}`);
 
     const modal = new bootstrap.Modal(document.getElementById('ubahKategori'));
     // const modal = new bootstrap.Modal(document.getElementById('ubahStatusKepemilikan'));
@@ -101,7 +101,7 @@ function openModalHapus(id, name) {
 
     // const formModalContent = document.getElementById('formModalContent');
     // formModalContent.action = '/assessment/' + id;
-    document.getElementById('form_hapus_kategori').setAttribute('action', `/assessment_kategori/${id}`);
+    document.getElementById('form_hapus_kategori').setAttribute('action', `/admin/assessment_kategori/${id}`);
 
     const modal = new bootstrap.Modal(document.getElementById('hapusKategori'));
     modal.show();
@@ -128,5 +128,31 @@ function openModalHapusSK(id, name) {
     document.getElementById('form_hapus_status_kepemilikan').setAttribute('action', `/admin/status_kepemilikan/${id}`);
 
     const modal = new bootstrap.Modal(document.getElementById('hapusStatusKepemilikan'));
+    modal.show();
+}
+
+function openModalUbahASK(id, name) {
+    document.getElementById('id_kategori').value = id;
+    document.getElementById('id_sub_kategori').value = id;
+    document.getElementById('nama_kategori').value = name;
+    document.getElementById('nama_sub_kategori').value = name;
+
+    document.getElementById('form_ubah_sub_kategori').setAttribute('action', `/admin/assessment_sub_kategori/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('ubahSubKategori'));
+    // const modal = new bootstrap.Modal(document.getElementById('ubahStatusKepemilikan'));
+    modal.show();
+}
+
+function openModalHapusASK(id, name) {
+    document.getElementById('id_kategori').value = id;
+    document.getElementById('id_sub_kategori').value = id;
+    document.getElementById('nama_kategori').value = name;
+    document.getElementById('nama_sub_kategori').value = name;
+
+    document.getElementById('form_hapus_sub_kategori').setAttribute('action', `/admin/assessment_sub_kategori/${id}`);
+
+    const modal = new bootstrap.Modal(document.getElementById('hapusSubKategori'));
+    // const modal = new bootstrap.Modal(document.getElementById('ubahStatusKepemilikan'));
     modal.show();
 }
